@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.DAL.Interface
 {
-    interface IHallDao
+    public interface IHallDao
     {
     }
 }

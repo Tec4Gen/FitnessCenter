@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.BLL.Interface
 {
-    class HallLogic
+    public class HallLogic
     {
     }
 }
