@@ -31,7 +31,7 @@ CREATE TABLE dbo.[User]
 	LastName NVARCHAR(50) NULL,
 	MiddleName NVARCHAR(50) NULL,
 	[Login] NVARCHAR(50) NOT NULL,
-	[HashPassword] NVARCHAR(100) NOT NULL,
+	[HashPassword] VARBINARY(MAX) NOT NULL,
 	RoleWebSite INT NULL DEFAULT 1,
 	)
 GO
@@ -42,7 +42,16 @@ ALTER TABLE [User]
 	ON DELETE SET NULL
 GO
 
-
+CREATE PROCEDURE [dbo].[CheckUser]
+	@Login NVARCHAR(50),
+	@HashPassword NVARCHAR(50)
+AS	
+BEGIN
+	SELECT [Login],HashPassword
+	FROM [User]
+	WHERE  @Login = [Login] AND @HashPassword = HashPassword;
+END
+GO
 --///////////////////////////////////////////////
 --                  Lesson Table
 --///////////////////////////////////////////////
@@ -57,7 +66,7 @@ CREATE TABLE dbo.[Lesson]
 	)
 GO
 
-CREATE TABLE dbo.[UserLesson]
+CREATE TABLE dbo.[UsersLesson]
 	(
 	Id INT PRIMARY KEY IDENTITY(1,1),
 	IdUser INT NOT NULL,
@@ -65,15 +74,15 @@ CREATE TABLE dbo.[UserLesson]
 	)
 GO
 
-ALTER TABLE [UserLesson]
-	ADD CONSTRAINT FK_UserLesson_User_ID FOREIGN KEY (IdUser)
+ALTER TABLE [UsersLesson]
+	ADD CONSTRAINT FK_UsersLesson_User_ID FOREIGN KEY (IdUser)
 		REFERENCES [User](Id)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
 GO
 
-ALTER TABLE [UserLesson]
-	ADD CONSTRAINT FK_UserLesson_Lesson_ID FOREIGN KEY (IdLesson)
+ALTER TABLE [UsersLesson]
+	ADD CONSTRAINT FK_UsersLesson_Lesson_ID FOREIGN KEY (IdLesson)
 		REFERENCES Lesson(Id)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
@@ -85,7 +94,7 @@ GO
 CREATE TABLE dbo.[Hall]
 	(
 	Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-	NameHall NVARCHAR(50) NOT NULL
+	NameHall NVARCHAR(50) UNIQUE NOT NULL
 	)
 GO
 
@@ -95,3 +104,231 @@ ALTER TABLE [Lesson]
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
 GO
+
+
+--///////////////////////////////////////////////
+--          StorageProcedure User
+--///////////////////////////////////////////////
+
+CREATE PROCEDURE [dbo].[GetUserById]
+	@Id INT
+AS
+BEGIN
+     SELECT	Id, FirstName, LastName, MiddleName, RoleWebSite
+	 FROM [User]
+     WHERE (@Id = Id )
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertUser]
+
+    @FirstName NVARCHAR(50),
+	@LastName NVARCHAR(50),
+	@MiddleName NVARCHAR(50),
+	@Login NVARCHAR(50),
+	@HashPassword VARBINARY(MAX),
+	@RoleWebSite INT
+AS
+BEGIN	
+	INSERT INTO [User](FirstName,LastName,MiddleName,[Login],HashPassword, RoleWebSite)
+	VALUES (@FirstName, @LastName, @MiddleName, @Login, @HashPassword, @RoleWebSite)
+END
+GO
+
+CREATE PROCEDURE [dbo].[DeleteUser]
+	@Id INT
+AS	
+BEGIN
+	DELETE FROM [User]
+	WHERE Id = @Id;
+END
+GO
+
+CREATE PROCEDURE [dbo].[UpdateClient]
+	@Id INT,
+	@FirstName NVARCHAR(50),
+	@LastName NVARCHAR(50),
+	@MiddleName NVARCHAR(50),
+	@RoleWebSite INT
+AS
+BEGIN
+	UPDATE [User] SET FirstName = @FirstName,LastName = @LastName, MiddleName = @MiddleName, RoleWebSite = @RoleWebSite
+	FROM [User]
+	WHERE (@Id = Id)
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetAllUsers]
+AS
+BEGIN
+     SELECT Id, FirstName, LastName, MiddleName, [RoleWebSite]
+	 FROM [User] 
+END
+GO
+
+--///////////////////////////////////////////////
+--          StorageProcedure Lesson
+--///////////////////////////////////////////////
+
+CREATE PROCEDURE [dbo].[GetLessonById]
+	@Id INT
+AS
+BEGIN
+     SELECT	Id,	IdUserCoach, IdHall, [DateTime], [Description]
+	 FROM Lesson
+     WHERE (@Id = Id )
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertLesson]
+
+    @IdUserCoach INT,
+	@IdHall INT,
+	@DateTime DATETIME2,
+	@Description NVARCHAR(50)
+AS
+BEGIN	
+	INSERT INTO Lesson (IdUserCoach,IdHall,[DateTime],[Description])
+	VALUES (@IdUserCoach, @IdHall, @DateTime, @Description)
+END
+GO
+
+
+CREATE PROCEDURE [dbo].[DeleteLesson]
+	@Id INT
+AS	
+BEGIN
+	DELETE FROM Lesson
+	WHERE Id = @Id;
+END
+GO
+
+CREATE PROCEDURE [dbo].[UpdateLesson]
+	@Id INT,
+	@IdUserCoach INT,
+	@IdHall INT,
+	@DateTime DATETIME2,
+	@Description NVARCHAR(50)
+AS
+BEGIN
+	UPDATE Lesson SET IdUserCoach = @IdUserCoach, IdHall = @IdHall, [DateTime] = @DateTime, [Description] = @Description
+	FROM Lesson
+	WHERE (@Id = Id)
+END
+GO
+
+
+CREATE PROCEDURE [dbo].[GetAllLessons]
+AS
+BEGIN
+     SELECT Id, IdUserCoach, IdHall, [DateTime], [Description]
+	 FROM Lesson 
+END
+GO
+
+--///////////////////////////////////////////////
+--          StorageProcedure UsersLesson
+--///////////////////////////////////////////////
+
+CREATE PROCEDURE [dbo].[GetUsersLessonById]
+	@Id INT
+AS
+BEGIN
+     SELECT	Id,	IdUser, IdLesson
+	 FROM UsersLesson
+     WHERE (@Id = Id)
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetAllLessonsByIdUser]
+    @IdUser INT
+AS
+BEGIN	
+	SELECT	Id,	IdUser, IdLesson
+	 FROM UsersLesson
+     WHERE (@IdUser = IdUser)
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetAllUsersByIdLesson]
+    @IdLesson INT
+AS
+BEGIN	
+	SELECT	Id,	IdUser, IdLesson
+	 FROM UsersLesson
+     WHERE (@IdLesson = IdLesson)
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertUsersLesson]
+
+    @IdUser INT,
+	@IdLesson INT
+AS
+BEGIN	
+	INSERT INTO UsersLesson (IdUser,IdLesson)
+	VALUES (@IdUser, @IdLesson)
+END
+GO
+
+CREATE PROCEDURE [dbo].[DeleteUsersLesson]
+	@Id INT
+AS	
+BEGIN
+	DELETE FROM UsersLesson
+	WHERE Id = @Id;
+END
+GO
+
+--///////////////////////////////////////////////
+--          StorageProcedure Hall
+--///////////////////////////////////////////////
+
+CREATE PROCEDURE [dbo].[GetHallById]
+	@Id INT
+AS
+BEGIN
+     SELECT	Id,	NameHall
+	 FROM Hall
+     WHERE (@Id = Id)
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertHall]
+	@Name INT
+AS
+BEGIN	
+	INSERT INTO Hall (NameHall)
+	VALUES (@Name)
+END
+GO
+
+CREATE PROCEDURE [dbo].[DeleteHall]
+	@Id INT
+AS	
+BEGIN
+	DELETE FROM Hall
+	WHERE Id = @Id;
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetAllHall]
+AS
+BEGIN
+     SELECT Id, NameHall
+	 FROM Hall 
+END
+GO
+
+--///////////////////////////////////////////////
+--          StorageProcedure RoleWebSite
+--///////////////////////////////////////////////
+
+CREATE PROCEDURE [dbo].[GetAllRole]
+AS
+BEGIN
+     SELECT Id, [Name]
+	 FROM RoleWebSite 
+END
+GO
+

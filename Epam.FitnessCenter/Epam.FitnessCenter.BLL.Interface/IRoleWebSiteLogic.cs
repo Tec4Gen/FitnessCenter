@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Epam.FitnessCenter.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Epam.FitnessCenter.BLL.Interface
 {
     public interface IRoleWebSiteLogic
     {
+        IEnumerable<RoleWebSite> GetAll();
     }
 }

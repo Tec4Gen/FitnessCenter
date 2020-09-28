@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Epam.FitnessCenter.BLL.Interface;
+using Epam.FitnessCenter.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.BLL
 {
-    public class RoleWebSiteLogic
+    public class RoleWebSiteLogic : IRoleWebSiteLogic
     {
+        private IRoleWebSiteLogic _roleWebSiteLogic;
+
+        public RoleWebSiteLogic(IRoleWebSiteLogic roleWebSiteLogic)
+        {
+            _roleWebSiteLogic = roleWebSiteLogic;
+        }
+        public IEnumerable<RoleWebSite> GetAll()
+        {
+            return _roleWebSiteLogic.GetAll();
+        }
     }
 }

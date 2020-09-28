@@ -1,12 +1,35 @@
-﻿using System;
+﻿using Epam.FitnessCenter.DAL.Interface;
+using Epam.FitnessCenter.Entities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.DAL
 {
-    public class LessonDao
+    public class LessonDao : ILessonDao
     {
+        public void Add(Lesson lesson)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Lesson> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Lesson GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Lesson lesson)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

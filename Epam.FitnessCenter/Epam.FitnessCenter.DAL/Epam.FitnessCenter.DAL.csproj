@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,16 @@
     <Compile Include="RoleWebSiteDao.cs" />
     <Compile Include="UserDao.cs" />
     <Compile Include="UsersLessonDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.FitnessCenter.DAL.Interface\Epam.FitnessCenter.DAL.Interface.csproj">
+      <Project>{040A9107-F2DD-4794-A8B1-DB98FB66FE07}</Project>
+      <Name>Epam.FitnessCenter.DAL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Entities\Epam.FitnessCenter.Entities.csproj">
+      <Project>{3A13798E-CF77-4327-9C6C-6F8F52087CF9}</Project>
+      <Name>Epam.FitnessCenter.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,8 +45,14 @@
     <Compile Include="ILessonDao.cs" />
     <Compile Include="IRoleWebSiteDao.cs" />
     <Compile Include="IUserDao.cs" />
-    <Compile Include="IUsersLesson.cs" />
+    <Compile Include="IUsersLessonDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.FitnessCenter.Entities\Epam.FitnessCenter.Entities.csproj">
+      <Project>{3A13798E-CF77-4327-9C6C-6F8F52087CF9}</Project>
+      <Name>Epam.FitnessCenter.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
