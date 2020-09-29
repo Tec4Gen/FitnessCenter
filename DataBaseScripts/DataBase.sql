@@ -144,7 +144,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE [dbo].[UpdateClient]
+CREATE PROCEDURE [dbo].[UpdateUser]
 	@Id INT,
 	@FirstName NVARCHAR(50),
 	@LastName NVARCHAR(50),

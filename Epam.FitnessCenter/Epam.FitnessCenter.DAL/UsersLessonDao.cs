@@ -2,11 +2,13 @@
 using Epam.FitnessCenter.Entities;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace Epam.FitnessCenter.DAL
 {
     public class UsersLessonDao : IUsersLessonDao
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["FintessCenter"].ConnectionString;
         public void Add(Lesson lesson)
         {
             throw new NotImplementedException();
