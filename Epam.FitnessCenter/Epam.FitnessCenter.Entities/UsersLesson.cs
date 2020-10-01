@@ -1,6 +1,6 @@
 ﻿namespace Epam.FitnessCenter.Entities
 {
-    public class UserLesson
+    public class UsersLesson
     {
         public int Id { get; set; }
 

@@ -11,7 +11,7 @@ namespace Epam.FitnessCenter.DAL.Interface
     {
         UserLesson GetById(int id);
 
-        void Add(Lesson lesson);
+        void Add(UserLesson lesson);
 
         void Remove(int id);
 

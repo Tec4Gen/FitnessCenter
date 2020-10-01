@@ -18,17 +18,17 @@ namespace Epam.FitnessCenter.BLL
             _usersLessonLogic.Add(lesson);
         }
 
-        public IEnumerable<UserLesson> GetAllLessonsByIdUser(int idUser)
+        public IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser)
         {
             return _usersLessonLogic.GetAllLessonsByIdUser(idUser);
         }
 
-        public IEnumerable<UserLesson> GetAllUsersByIdLesson(int idLesson)
+        public IEnumerable<UsersLesson> GetAllUsersByIdLesson(int idLesson)
         {
             return _usersLessonLogic.GetAllUsersByIdLesson(idLesson);
         }
 
-        public UserLesson GetById(int id)
+        public UsersLesson GetById(int id)
         {
             return _usersLessonLogic.GetById(id);
         }

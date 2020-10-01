@@ -9,14 +9,14 @@ namespace Epam.FitnessCenter.BLL.Interface
 {
     public interface IUsersLessonLogic
     {
-        UserLesson GetById(int id);
+        UsersLesson GetById(int id);
 
         void Add(Lesson lesson);
 
         void Remove(int id);
 
-        IEnumerable<UserLesson> GetAllLessonsByIdUser(int idUser);
+        IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser);
 
-        IEnumerable<UserLesson> GetAllUsersByIdLesson(int idLesson);
+        IEnumerable<UsersLesson> GetAllUsersByIdLesson(int idLesson);
     }
 }
