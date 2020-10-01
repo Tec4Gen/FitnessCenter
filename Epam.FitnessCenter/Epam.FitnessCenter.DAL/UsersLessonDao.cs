@@ -214,7 +214,6 @@ namespace Epam.FitnessCenter.DAL
                 {
 
                 }
-
             }
         }
     }
