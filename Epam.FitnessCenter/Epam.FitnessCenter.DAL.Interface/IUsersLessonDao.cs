@@ -9,14 +9,14 @@ namespace Epam.FitnessCenter.DAL.Interface
 {
     public interface IUsersLessonDao
     {
-        UserLesson GetById(int id);
+        UsersLesson GetById(int id);
 
-        void Add(UserLesson lesson);
+        void Add(UsersLesson lesson);
 
         void Remove(int id);
 
-        IEnumerable<UserLesson> GetAllLessonsByIdUser(int idUser);
+        IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser);
 
-        IEnumerable<UserLesson> GetAllUsersByIdLesson(int idLesson);
+        IEnumerable<UsersLesson> GetAllUsersByIdLesson(int idLesson);
     }
 }
