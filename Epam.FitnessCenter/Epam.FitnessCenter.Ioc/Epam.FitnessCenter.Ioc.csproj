@@ -44,10 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependenciesResolver.cs" />
+    <Compile Include="NinjectBinds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.FitnessCenter.BLL.Interface\Epam.FitnessCenter.BLL.Interface.csproj">
+      <Project>{13eb2ce1-993f-4fbc-96c3-546c07414e6c}</Project>
+      <Name>Epam.FitnessCenter.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.BLL\Epam.FitnessCenter.BLL.csproj">
+      <Project>{39099F3D-B2DD-4BF7-8121-CE1D9568E641}</Project>
+      <Name>Epam.FitnessCenter.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.DAL.Interface\Epam.FitnessCenter.DAL.Interface.csproj">
+      <Project>{040A9107-F2DD-4794-A8B1-DB98FB66FE07}</Project>
+      <Name>Epam.FitnessCenter.DAL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.DAL\Epam.FitnessCenter.DAL.csproj">
+      <Project>{03014746-7DE0-4E73-AA9B-FA0B2D2D84E1}</Project>
+      <Name>Epam.FitnessCenter.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

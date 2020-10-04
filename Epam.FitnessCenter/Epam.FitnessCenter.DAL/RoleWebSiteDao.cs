@@ -10,7 +10,7 @@ namespace Epam.FitnessCenter.DAL
 {
     public class RoleWebSiteDao : IRoleWebSiteDao
     {
-        private string _connectionString = ConfigurationManager.ConnectionStrings["FintessCenter"].ConnectionString;
+        private string _connectionString = ConfigurationManager.ConnectionStrings["FitnessCenter"].ConnectionString;
         public IEnumerable<RoleWebSite> GetAll()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -38,7 +38,7 @@ namespace Epam.FitnessCenter.DAL
                     }
                     return listRole;
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;

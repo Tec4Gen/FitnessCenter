@@ -15,29 +15,32 @@ namespace Epam.FitnessCenter.BLL
             _lessonDao = lessonDao;
         }
 
-        public void Add(Lesson lesson)
+        public void Add(Lesson lesson, out IEnumerable<Error> listError)
         {
+            listError = new List<Error>();
             _lessonDao.Add(lesson);
         }
 
         public IEnumerable<Lesson> GetAll()
         {
-            throw new NotImplementedException();
+            return _lessonDao.GetAll();
         }
 
         public Lesson GetById(int id)
         {
-            throw new NotImplementedException();
+            return _lessonDao.GetById(id);
         }
 
-        public void Remove(int id)
+        public void Remove(int id, out IEnumerable<Error> listError)
         {
-            throw new NotImplementedException();
+            listError = new List<Error>();
+            _lessonDao.Remove(id);
         }
 
-        public void Update(Lesson lesson)
+        public void Update(Lesson lesson, out IEnumerable<Error> listError)
         {
-            throw new NotImplementedException();
+            listError = new List<Error>();
+            _lessonDao.Update(lesson);
         }
     }
 }

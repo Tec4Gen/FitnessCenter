@@ -13,8 +13,9 @@ namespace Epam.FitnessCenter.BLL.Interface
             _hallDao = hallDao;
         }
 
-        public void Add(Hall hall)
+        public void Add(Hall hall, out IEnumerable<Error> listError)
         {
+            listError = new List<Error>();
             _hallDao.Add(hall);
         }
 
@@ -28,8 +29,9 @@ namespace Epam.FitnessCenter.BLL.Interface
             return _hallDao.GetById(id);
         }
 
-        public void Remove(int id)
+        public void Remove(int id, out IEnumerable<Error> listError)
         {
+            listError = new List<Error>();
             _hallDao.Remove(id);
         }
     }
