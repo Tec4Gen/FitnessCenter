@@ -11,9 +11,9 @@ namespace Epam.FitnessCenter.BLL.Interface
     {
         UsersLesson GetById(int id);
 
-        void Add(Lesson lesson);
+        void Add(UsersLesson lesson, out ICollection<Error> listError);
 
-        void Remove(int id);
+        void Remove(int id, out ICollection<Error> listError);
 
         IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser);
 

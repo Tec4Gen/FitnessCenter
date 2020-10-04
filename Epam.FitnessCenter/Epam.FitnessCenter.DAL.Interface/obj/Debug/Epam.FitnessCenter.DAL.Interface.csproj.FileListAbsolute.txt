@@ -1,0 +1,9 @@
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\obj\Debug\Epam.FitnessCenter.DAL.Interface.csprojAssemblyReference.cache
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\obj\Debug\Epam.FitnessCenter.DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\bin\Debug\Epam.FitnessCenter.DAL.Interface.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\bin\Debug\Epam.FitnessCenter.DAL.Interface.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\bin\Debug\Epam.FitnessCenter.Entities.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\bin\Debug\Epam.FitnessCenter.Entities.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\obj\Debug\Epam.FitnessCenter.DAL.Interface.csproj.CopyComplete
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\obj\Debug\Epam.FitnessCenter.DAL.Interface.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL.Interface\obj\Debug\Epam.FitnessCenter.DAL.Interface.pdb

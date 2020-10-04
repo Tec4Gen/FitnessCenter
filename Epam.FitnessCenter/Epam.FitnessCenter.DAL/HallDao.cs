@@ -10,7 +10,7 @@ namespace Epam.FitnessCenter.DAL
 {
     public class HallDao : IHallDao
     {
-        private string _connectionString = ConfigurationManager.ConnectionStrings["FintessCenter"].ConnectionString;
+        private string _connectionString = ConfigurationManager.ConnectionStrings["FitnessCenter"].ConnectionString;
 
         public void Add(Hall hall)
         {
@@ -35,12 +35,11 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch (SqlException ex)
+                catch
                 {
                     throw;
                 }
             }
-
         }
 
         public IEnumerable<Hall> GetAll()
@@ -71,7 +70,7 @@ namespace Epam.FitnessCenter.DAL
 
                     return hallList;
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -113,7 +112,7 @@ namespace Epam.FitnessCenter.DAL
                     }
                     return null;
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -123,41 +122,34 @@ namespace Epam.FitnessCenter.DAL
 
         public void Remove(int id)
         {
-            try
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                using (SqlConnection connection = new SqlConnection(_connectionString))
+                var command = connection.CreateCommand();
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "dbo.DeleteHall";
+
+                SqlParameter parameterId = new SqlParameter
                 {
-                    var command = connection.CreateCommand();
+                    DbType = DbType.Int32,
+                    ParameterName = "@Id",
+                    Value = id,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterId);
 
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.CommandText = "dbo.DeleteHall";
+                try
+                {
+                    connection.Open();
 
-                    SqlParameter parameterId = new SqlParameter
-                    {
-                        DbType = DbType.Int32,
-                        ParameterName = "@Id",
-                        Value = id,
-                        Direction = ParameterDirection.Input
-                    };
-                    command.Parameters.Add(parameterId);
-
-                    try
-                    {
-                        connection.Open();
-
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        throw;
-                    }
-
+                    command.ExecuteNonQuery();
                 }
-            }
-            catch (Exception)
-            {
+                catch
+                {
+                    throw;
+                }
 
-                throw;
             }
         }
     }

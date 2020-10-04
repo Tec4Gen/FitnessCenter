@@ -1,4 +1,5 @@
 ﻿using Epam.FitnessCenter.BLL.Interface;
+using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
 using System.Collections.Generic;
 
@@ -6,36 +7,38 @@ namespace Epam.FitnessCenter.BLL
 {
     public class UsersLessonLogic : IUsersLessonLogic
     {
-        IUsersLessonLogic _usersLessonLogic;
+        IUsersLessonDao _usersLessonDao;
 
-        public UsersLessonLogic(IUsersLessonLogic usersLessonLogic)
+        public UsersLessonLogic(IUsersLessonDao usersLessonLogic)
         {
-            _usersLessonLogic = usersLessonLogic;
+            _usersLessonDao = usersLessonLogic;
         }
 
-        public void Add(Lesson lesson)
+        public void Add(UsersLesson lesson, out ICollection<Error> listError)
         {
-            _usersLessonLogic.Add(lesson);
+            listError = new List<Error>();
+            _usersLessonDao.Add(lesson);
         }
 
         public IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser)
         {
-            return _usersLessonLogic.GetAllLessonsByIdUser(idUser);
+            return _usersLessonDao.GetAllLessonsByIdUser(idUser);
         }
 
         public IEnumerable<UsersLesson> GetAllUsersByIdLesson(int idLesson)
         {
-            return _usersLessonLogic.GetAllUsersByIdLesson(idLesson);
+            return _usersLessonDao.GetAllUsersByIdLesson(idLesson);
         }
 
         public UsersLesson GetById(int id)
         {
-            return _usersLessonLogic.GetById(id);
+            return _usersLessonDao.GetById(id);
         }
 
-        public void Remove(int id)
+        public void Remove(int id, out ICollection<Error> listError)
         {
-            _usersLessonLogic.Remove(id);
+            listError = new List<Error>();
+            _usersLessonDao.Remove(id);
         }
     }
 }

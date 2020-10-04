@@ -53,7 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Epam.FitnessCenter.BLL.Interface\Epam.FitnessCenter.BLL.Interface.csproj">
+<<<<<<< HEAD
       <Project>{13EB2CE1-993F-4FBC-96C3-546C07414E6C}</Project>
+=======
+      <Project>{13eb2ce1-993f-4fbc-96c3-546c07414e6c}</Project>
+>>>>>>> origin/master
       <Name>Epam.FitnessCenter.BLL.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Epam.FitnessCenter.BLL\Epam.FitnessCenter.BLL.csproj">

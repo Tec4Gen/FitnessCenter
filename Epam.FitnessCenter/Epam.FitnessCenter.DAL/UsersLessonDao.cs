@@ -10,7 +10,7 @@ namespace Epam.FitnessCenter.DAL
 {
     public class UsersLessonDao : IUsersLessonDao
     {
-        private string _connectionString = ConfigurationManager.ConnectionStrings["FintessCenter"].ConnectionString;
+        private string _connectionString = ConfigurationManager.ConnectionStrings["FitnessCenter"].ConnectionString;
 
         public void Add(UsersLesson usersLesson)
         {
@@ -45,9 +45,8 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch
+                catch(SqlException)
                 {
-
                     throw;
                 }
             }
@@ -136,7 +135,7 @@ namespace Epam.FitnessCenter.DAL
                     }
                     return listUsersLesson;
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -210,7 +209,7 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch
                 {
 
                 }

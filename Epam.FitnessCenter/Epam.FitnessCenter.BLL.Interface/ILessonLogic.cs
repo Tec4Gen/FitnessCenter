@@ -11,11 +11,11 @@ namespace Epam.FitnessCenter.BLL.Interface
     {
         Lesson GetById(int id);
 
-        void Add(Lesson lesson);
+        void Add(Lesson lesson, out IEnumerable<Error> listError);
 
-        void Remove(int id);
+        void Remove(int id, out IEnumerable<Error> listError);
 
-        void Update(Lesson lesson);
+        void Update(Lesson lesson, out IEnumerable<Error> listError);
 
         IEnumerable<Lesson> GetAll();
     }

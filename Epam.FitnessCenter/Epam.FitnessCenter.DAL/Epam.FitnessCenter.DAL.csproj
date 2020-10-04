@@ -58,6 +58,10 @@
       <Project>{3A13798E-CF77-4327-9C6C-6F8F52087CF9}</Project>
       <Name>Epam.FitnessCenter.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Exception\Epam.FitnessCenter.CustomException.csproj">
+      <Project>{106e603e-b051-421a-98c4-2c33ab0e10ac}</Project>
+      <Name>Epam.FitnessCenter.CustomException</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

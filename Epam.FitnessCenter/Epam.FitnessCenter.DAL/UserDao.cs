@@ -1,4 +1,5 @@
-﻿using Epam.FitnessCenter.DAL.Interface;
+﻿using Epam.FitnessCenter.CustomException;
+using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace Epam.FitnessCenter.DAL
 {
     public class UserDao : IUserDao
     {
-        private string _connectionString = ConfigurationManager.ConnectionStrings["FintessCenter"].ConnectionString;
+        private string _connectionString = ConfigurationManager.ConnectionStrings["FitnessCenter"].ConnectionString;
 
         public void Add(User user)
         {
@@ -68,7 +69,7 @@ namespace Epam.FitnessCenter.DAL
 
                 SqlParameter parameterRoleWebSite = new SqlParameter 
                 {
-                    DbType = DbType.Binary,
+                    DbType = DbType.Int32,
                     ParameterName = "@RoleWebSite",
                     Value = user.RoleWebSite,
                     Direction = ParameterDirection.Input
@@ -81,10 +82,14 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch (SqlException ex)
                 {
-
-                    throw;
+                    if (ex.Number == 2627)
+                        throw new UniqueIdentifierException("Login busy");
+                }
+                catch (Exception ex)
+                {
+                    throw; 
                 }
             }
         }
@@ -120,7 +125,7 @@ namespace Epam.FitnessCenter.DAL
                     return listUsers;
 
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -166,7 +171,7 @@ namespace Epam.FitnessCenter.DAL
                     }
                     return null;
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -198,7 +203,7 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;
@@ -267,7 +272,7 @@ namespace Epam.FitnessCenter.DAL
 
                     command.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch
                 {
 
                     throw;

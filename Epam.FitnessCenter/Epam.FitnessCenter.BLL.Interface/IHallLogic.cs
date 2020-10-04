@@ -11,9 +11,9 @@ namespace Epam.FitnessCenter.BLL.Interface
     {
         Hall GetById(int id);
 
-        void Add(Hall hall);
+        void Add(Hall hall, out IEnumerable<Error> listError);
 
-        void Remove(int id);
+        void Remove(int id, out IEnumerable<Error> listError);
 
         IEnumerable<Hall> GetAll();
     }

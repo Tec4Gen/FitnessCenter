@@ -1,0 +1,13 @@
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\obj\Debug\Epam.FitnessCenter.DAL.csprojAssemblyReference.cache
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\obj\Debug\Epam.FitnessCenter.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.DAL.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.DAL.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.DAL.Interface.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.Entities.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.DAL.Interface.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.Entities.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\obj\Debug\Epam.FitnessCenter.DAL.csproj.CopyComplete
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\obj\Debug\Epam.FitnessCenter.DAL.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\obj\Debug\Epam.FitnessCenter.DAL.pdb
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.CustomException.dll
+C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.DAL\bin\Debug\Epam.FitnessCenter.CustomException.pdb

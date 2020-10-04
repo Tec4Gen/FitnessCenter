@@ -12,7 +12,7 @@
 
         public string Login { get; set; }
 
-        public string HashPassword { get; set; }
+        public byte[] HashPassword { get; set; }
 
         public int RoleWebSite { get; set; }
     }
