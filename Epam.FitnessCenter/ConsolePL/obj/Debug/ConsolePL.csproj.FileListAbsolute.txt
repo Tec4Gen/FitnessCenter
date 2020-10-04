@@ -22,3 +22,7 @@ C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\ConsolePL.pdb
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\bin\Debug\Epam.FitnessCenter.CustomException.dll
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\bin\Debug\Epam.FitnessCenter.CustomException.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\ConsolePL.csprojAssemblyReference.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\ConsolePL.csproj.CoreCompileInputs.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\ConsolePL.exe
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\ConsolePL\obj\Debug\ConsolePL.pdb

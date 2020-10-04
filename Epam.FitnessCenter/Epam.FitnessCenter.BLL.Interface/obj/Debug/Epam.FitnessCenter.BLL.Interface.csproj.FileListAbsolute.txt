@@ -7,3 +7,12 @@ C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.B
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.csproj.CopyComplete
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.dll
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\bin\Debug\Epam.FitnessCenter.BLL.Interface.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\bin\Debug\Epam.FitnessCenter.BLL.Interface.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\bin\Debug\Epam.FitnessCenter.Entities.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\bin\Debug\Epam.FitnessCenter.Entities.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.csprojAssemblyReference.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.csproj.CoreCompileInputs.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.csproj.CopyComplete
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL.Interface\obj\Debug\Epam.FitnessCenter.BLL.Interface.pdb

@@ -4,3 +4,9 @@ C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.E
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.csproj.CoreCompileInputs.cache
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.dll
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\bin\Debug\Epam.FitnessCenter.CustomException.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\bin\Debug\Epam.FitnessCenter.CustomException.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.csprojAssemblyReference.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.csproj.CoreCompileInputs.cache
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.pdb
