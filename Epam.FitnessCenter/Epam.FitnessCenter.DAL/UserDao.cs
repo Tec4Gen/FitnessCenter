@@ -1,6 +1,7 @@
 ﻿using Epam.FitnessCenter.CustomException;
 using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using Epam.FitnessCenter.Logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -81,14 +82,21 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
+
+                    Logs.Log.Info("User added");
+
                 }
                 catch (SqlException ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     if (ex.Number == 2627)
                         throw new UniqueIdentifierException("Login busy");
+                    if (ex.Number == 547)
+                        throw new RoleUndefinedException("Role not found in table");
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw; 
                 }
             }
@@ -122,15 +130,14 @@ namespace Epam.FitnessCenter.DAL
                             RoleWebSite = (int)reader["RoleWebSite"]
                          });
                     }
+                    Logs.Log.Info("All user received");
                     return listUsers;
-
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
-                }
-             
+                }  
             }
         }
 
@@ -169,11 +176,12 @@ namespace Epam.FitnessCenter.DAL
                             RoleWebSite = (int)reader["RoleWebSite"]
                         };
                     }
+                    Logs.Log.Info("User received");
                     return null;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -202,10 +210,12 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
-                }
-                catch
-                {
 
+                    Logs.Log.Info($"User with Id {id} deleted");
+                }
+                catch(Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -271,10 +281,19 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
-                }
-                catch
-                {
 
+                    Logs.Log.Info($"User with Id {user.Id} updated");
+                }
+                catch (SqlException ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    if (ex.Number == 547)
+                        throw new RoleUndefinedException("Role not found in table");
+                    throw;
+                }
+                catch (Exception ex) 
+                {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }

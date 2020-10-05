@@ -1,5 +1,6 @@
 ﻿using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using Epam.FitnessCenter.Logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -63,10 +64,11 @@ namespace Epam.FitnessCenter.DAL
 
                     commnad.ExecuteNonQuery();
 
+                    Logs.Log.Info("Lesson added");
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -100,10 +102,12 @@ namespace Epam.FitnessCenter.DAL
                             Decription = reader["Decription"] as string
                         });
                     }
+                    Logs.Log.Info("All lesson received");
                     return lessonList;
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -135,6 +139,7 @@ namespace Epam.FitnessCenter.DAL
 
                     if (reader.Read())
                     {
+                        Logs.Log.Info($"Lesson with - {id} Received");
                         return new Lesson
                         {
                             Id = (int)reader["Id"],
@@ -146,8 +151,9 @@ namespace Epam.FitnessCenter.DAL
                     }
                     return null;
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -176,9 +182,12 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
+
+                    Logs.Log.Info($"Lesson with Id {id} deleted");
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -242,11 +251,13 @@ namespace Epam.FitnessCenter.DAL
                 {
                     connection.Open();
 
-                    command.ExecuteNonQuery();  
-                }
-                catch
-                {
+                    command.ExecuteNonQuery();
 
+                    Logs.Log.Info($"Lesson with Id {lesson.Id} updated");
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }

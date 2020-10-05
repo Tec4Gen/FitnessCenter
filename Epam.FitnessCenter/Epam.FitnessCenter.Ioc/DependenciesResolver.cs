@@ -1,4 +1,5 @@
-﻿using Ninject;
+﻿
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace Epam.FitnessCenter.Ioc
     {
         private static NinjectBinds _ninjectBinds = new NinjectBinds();
         public static StandardKernel Kernel= new StandardKernel(_ninjectBinds);
+
+
     }
 }

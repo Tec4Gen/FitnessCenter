@@ -28,3 +28,7 @@ D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\obj\Debug\Epam.
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\obj\Debug\Epam.FitnessCenter.BLL.csproj.CopyComplete
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\obj\Debug\Epam.FitnessCenter.BLL.dll
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\obj\Debug\Epam.FitnessCenter.BLL.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\bin\Debug\Epam.FitnessCenter.Logger.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\bin\Debug\log4net.dll
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\bin\Debug\Epam.FitnessCenter.Logger.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.BLL\bin\Debug\log4net.xml

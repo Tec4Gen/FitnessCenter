@@ -19,17 +19,17 @@ namespace ConsolePL
 
             var a = kernel.Get<IUserLogic>();
 
-            a.Add(new User 
-            {
-                FirstName = "Ivan",
-                LastName = "Martyshin",
-                MiddleName = "Alexeevich",
-                Login = "Tec4Gen",
-                HashPassword = new byte[10],
-                RoleWebSite = 1
-                
-            }, out ICollection<Error> listError);
+            //a.Add(new User 
+            //{
+            //    FirstName = "Ivan",
+            //    LastName = "Martyshin",
+            //    MiddleName = "Alexeevich",
+            //    Login = "Tec4Gen",
+            //    HashPassword = new byte[10],
+            //    RoleWebSite = 1
 
+            //}, out ICollection<Error> listError);
+            a.Remove(1,out ICollection<Error> listError);
 
 
             Console.ReadLine();

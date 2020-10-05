@@ -1,9 +1,5 @@
 ﻿using Epam.FitnessCenter.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.BLL.Interface
 {
@@ -11,9 +7,9 @@ namespace Epam.FitnessCenter.BLL.Interface
     {
         Hall GetById(int id);
 
-        void Add(Hall hall, out IEnumerable<Error> listError);
+        void Add(Hall hall, out ICollection<Error> listError);
 
-        void Remove(int id, out IEnumerable<Error> listError);
+        void Remove(int id, out ICollection<Error> listError);
 
         IEnumerable<Hall> GetAll();
     }

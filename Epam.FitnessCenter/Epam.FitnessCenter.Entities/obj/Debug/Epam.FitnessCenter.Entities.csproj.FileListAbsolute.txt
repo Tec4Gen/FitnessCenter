@@ -6,7 +6,7 @@ C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.E
 C:\Users\Neo\Desktop\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.csprojAssemblyReference.cache
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\bin\Debug\Epam.FitnessCenter.Entities.dll
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\bin\Debug\Epam.FitnessCenter.Entities.pdb
-D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.csprojAssemblyReference.cache
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.csproj.CoreCompileInputs.cache
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.dll
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Entities\obj\Debug\Epam.FitnessCenter.Entities.csprojAssemblyReference.cache

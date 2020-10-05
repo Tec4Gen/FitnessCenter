@@ -1,5 +1,7 @@
-﻿using Epam.FitnessCenter.DAL.Interface;
+﻿using Epam.FitnessCenter.CustomException;
+using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using Epam.FitnessCenter.Logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -34,9 +36,14 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
+
+                    Logs.Log.Info("Hall added");
                 }
-                catch
+                catch (SqlException ex)
                 {
+                    Logs.Log.Error(ex.Message);
+                    if (ex.Number == 2627)
+                        throw new UniqueIdentifierException("NameHall busy");
                     throw;
                 }
             }
@@ -67,12 +74,13 @@ namespace Epam.FitnessCenter.DAL
                             NameHall = reader["NameHall"] as string
                         });
                     }
+                    Logs.Log.Info("All hall received");
 
                     return hallList;
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -104,17 +112,19 @@ namespace Epam.FitnessCenter.DAL
 
                     if (reader.Read())
                     {
+                        Logs.Log.Info($"Hall with - {id} Received");
                         return new Hall
                         {
                             Id = (int)reader["Id"],
                             NameHall = reader["NameHall"] as string
                         };
+
                     }
                     return null;
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -122,7 +132,6 @@ namespace Epam.FitnessCenter.DAL
 
         public void Remove(int id)
         {
-
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 var command = connection.CreateCommand();
@@ -144,12 +153,15 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
+
+                    Logs.Log.Info($"Hall with Id {id} deleted");
+
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
-
             }
         }
     }

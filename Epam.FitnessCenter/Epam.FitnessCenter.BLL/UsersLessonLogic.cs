@@ -1,6 +1,8 @@
 ﻿using Epam.FitnessCenter.BLL.Interface;
+using Epam.FitnessCenter.CustomException;
 using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace Epam.FitnessCenter.BLL
@@ -17,7 +19,24 @@ namespace Epam.FitnessCenter.BLL
         public void Add(UsersLesson lesson, out ICollection<Error> listError)
         {
             listError = new List<Error>();
-            _usersLessonDao.Add(lesson);
+            try
+            {
+                _usersLessonDao.Add(lesson);
+            }
+            catch (UniqueIdentifierException) 
+            {
+                listError.Add(new Error
+                {
+                    Message = "You are already signed up for this lesson"
+                });
+            }
+            catch
+            {
+                listError.Add(new Error
+                {
+                    Message = "Internal error, try again"
+                });
+            } 
         }
 
         public IEnumerable<UsersLesson> GetAllLessonsByIdUser(int idUser)
@@ -38,6 +57,24 @@ namespace Epam.FitnessCenter.BLL
         public void Remove(int id, out ICollection<Error> listError)
         {
             listError = new List<Error>();
+
+            try
+            {
+                if (_usersLessonDao.GetById(id) == null)
+                {
+                    listError.Add(new Error
+                    {
+                        Message = "Relationship won't find"
+                    });
+                }
+            }
+            catch
+            {
+                listError.Add(new Error
+                {
+                    Message = "Internal error, try again"
+                });
+            }
             _usersLessonDao.Remove(id);
         }
     }

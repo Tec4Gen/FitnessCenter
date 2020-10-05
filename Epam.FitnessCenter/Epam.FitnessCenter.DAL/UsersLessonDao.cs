@@ -1,5 +1,7 @@
-﻿using Epam.FitnessCenter.DAL.Interface;
+﻿using Epam.FitnessCenter.CustomException;
+using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using Epam.FitnessCenter.Logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -44,9 +46,19 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
+
+                    Logs.Log.Info("UsersLesson relationship added");
                 }
-                catch(SqlException)
+                catch (SqlException ex)
                 {
+                    Logs.Log.Error(ex.Message);
+                    if (ex.Number == 2627)
+                        throw new UniqueIdentifierException("Such a pair of values is already in the table");
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -87,12 +99,12 @@ namespace Epam.FitnessCenter.DAL
                             IdLesson = (int)reader["IdLesson"]
                         });
                     }
-
+                    Logs.Log.Info($"All Lesson with IdUser {idUser} Received");
                     return listUsersLesson;
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -133,11 +145,12 @@ namespace Epam.FitnessCenter.DAL
                             IdLesson = (int)reader["IdLesson"]
                         });
                     }
+                    Logs.Log.Info($"All Users with IdLesson {idLesson} Received");
                     return listUsersLesson;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -169,6 +182,7 @@ namespace Epam.FitnessCenter.DAL
 
                     if (reader.Read())
                     {
+                        Logs.Log.Info($"UsersLesson relationship with Id {id} Received");
                         return new UsersLesson 
                         {
                             Id = (int)reader["Id"],
@@ -176,10 +190,13 @@ namespace Epam.FitnessCenter.DAL
                             IdLesson = (int)reader["IdLesson"]
                         };
                     }
+                    Logs.Log.Info($"UsersLesson relationship with Id {id} Not find");
+                    
                     return null;
                 }
-                catch 
+                catch (Exception ex)
                 {
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }
@@ -208,10 +225,13 @@ namespace Epam.FitnessCenter.DAL
                     connection.Open();
 
                     command.ExecuteNonQuery();
-                }
-                catch
-                {
 
+                    Logs.Log.Info($"UsersLesson relationship with Id {id} deleted");
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    throw;
                 }
             }
         }

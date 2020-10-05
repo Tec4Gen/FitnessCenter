@@ -1,5 +1,6 @@
 ﻿using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
+using Epam.FitnessCenter.Logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -36,11 +37,13 @@ namespace Epam.FitnessCenter.DAL
                             Name = reader["RolewebSite"] as string
                         });
                     }
+                    Logs.Log.Info($"All Role Received");
+
                     return listRole;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Logs.Log.Error(ex.Message);
                     throw;
                 }
             }

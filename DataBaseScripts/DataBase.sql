@@ -88,6 +88,7 @@ ALTER TABLE [UsersLesson]
 		ON UPDATE CASCADE
 GO
 
+ALTER TABLE UsersLesson ADD UNIQUE ( IdUser , IdLesson )
 --///////////////////////////////////////////////
 --                  Hall Table
 --///////////////////////////////////////////////

@@ -62,6 +62,10 @@
       <Project>{3A13798E-CF77-4327-9C6C-6F8F52087CF9}</Project>
       <Name>Epam.FitnessCenter.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Ioc\Epam.FitnessCenter.Ioc.csproj">
+      <Project>{4c66402e-6065-4b4d-9ffb-3493fffac6d9}</Project>
+      <Name>Epam.FitnessCenter.Ioc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

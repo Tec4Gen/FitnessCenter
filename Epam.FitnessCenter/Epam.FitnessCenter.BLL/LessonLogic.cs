@@ -15,10 +15,22 @@ namespace Epam.FitnessCenter.BLL
             _lessonDao = lessonDao;
         }
 
-        public void Add(Lesson lesson, out IEnumerable<Error> listError)
+        public void Add(Lesson lesson, out ICollection<Error> listError)
         {
             listError = new List<Error>();
-            _lessonDao.Add(lesson);
+            try
+            {
+                _lessonDao.Add(lesson);
+            }
+            catch
+            {
+
+                listError.Add(new Error
+                {
+                    Message = "Internal error, try again"
+                });
+            }
+           
         }
 
         public IEnumerable<Lesson> GetAll()
@@ -31,16 +43,54 @@ namespace Epam.FitnessCenter.BLL
             return _lessonDao.GetById(id);
         }
 
-        public void Remove(int id, out IEnumerable<Error> listError)
+        public void Remove(int id, out ICollection<Error> listError)
         {
             listError = new List<Error>();
-            _lessonDao.Remove(id);
+
+            try
+            {
+                if (_lessonDao.GetById(id) == null)
+                {
+                    listError.Add(new Error
+                    {
+                        Message = "Lesson won't find"
+                    });
+                    return;
+                }
+                _lessonDao.Remove(id);
+            }
+            catch
+            {
+
+                listError.Add(new Error
+                {
+                    Message = "Internal error, try again"
+                });
+            }
         }
 
-        public void Update(Lesson lesson, out IEnumerable<Error> listError)
+        public void Update(Lesson lesson, out ICollection<Error> listError)
         {
             listError = new List<Error>();
-            _lessonDao.Update(lesson);
+            try
+            {
+                if (_lessonDao.GetById(lesson.Id) == null)
+                {
+                    listError.Add(new Error
+                    {
+                        Message = "Lesson won't find"
+                    });
+                    return;
+                }
+                _lessonDao.Update(lesson);
+            }
+            catch
+            {
+                listError.Add(new Error
+                {
+                    Message = "Internal error, try again"
+                });
+            }
         }
     }
 }
