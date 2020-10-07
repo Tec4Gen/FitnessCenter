@@ -1,0 +1,16 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+@using Epam.FitnessCenter.Logger;
+@{
+
+    Layout = "BasePages/_main.cshtml";
+
+    var a = DependenciesResolver.Kernel.Get<ILessonLogic>();
+
+    Page.Section = "startPage";
+
+}
+@section startPage{
+    <div>Welcome to the club buddy</div>
+}

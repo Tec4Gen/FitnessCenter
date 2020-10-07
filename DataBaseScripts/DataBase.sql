@@ -33,6 +33,7 @@ CREATE TABLE dbo.[User]
 	[Login] NVARCHAR(50) UNIQUE NOT NULL,
 	[HashPassword] VARBINARY(MAX) NOT NULL,
 	RoleWebSite INT NULL DEFAULT 1,
+	Avatar NVARCHAR(MAX) NULL
 	)
 GO
 ALTER TABLE [User]
@@ -115,9 +116,19 @@ CREATE PROCEDURE [dbo].[GetUserById]
 	@Id INT
 AS
 BEGIN
-     SELECT	Id, FirstName, LastName, MiddleName, RoleWebSite
+     SELECT	Id, FirstName, LastName, MiddleName, RoleWebSite, Avatar
 	 FROM [User]
      WHERE (@Id = Id )
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetUserByRole]
+	@IdRole INT
+AS
+BEGIN
+     SELECT	Id, FirstName, LastName, MiddleName, RoleWebSite, Avatar
+	 FROM [User]
+     WHERE (@IdRole = RoleWebSite )
 END
 GO
 
@@ -128,11 +139,12 @@ CREATE PROCEDURE [dbo].[InsertUser]
 	@MiddleName NVARCHAR(50),
 	@Login NVARCHAR(50),
 	@HashPassword VARBINARY(MAX),
-	@RoleWebSite INT
+	@RoleWebSite INT,
+	@Avatar VARBINARY(MAX) = NULL
 AS
 BEGIN	
-	INSERT INTO [User](FirstName,LastName,MiddleName,[Login],HashPassword, RoleWebSite)
-	VALUES (@FirstName, @LastName, @MiddleName, @Login, @HashPassword, @RoleWebSite)
+	INSERT INTO [User](FirstName,LastName,MiddleName,[Login],HashPassword, RoleWebSite, Avatar)
+	VALUES (@FirstName, @LastName, @MiddleName, @Login, @HashPassword, @RoleWebSite, @Avatar)
 END
 GO
 
@@ -150,10 +162,11 @@ CREATE PROCEDURE [dbo].[UpdateUser]
 	@FirstName NVARCHAR(50),
 	@LastName NVARCHAR(50),
 	@MiddleName NVARCHAR(50),
-	@RoleWebSite INT
+	@RoleWebSite INT,
+	@Avatar VARBINARY(MAX) = NULL
 AS
 BEGIN
-	UPDATE [User] SET FirstName = @FirstName,LastName = @LastName, MiddleName = @MiddleName, RoleWebSite = @RoleWebSite
+	UPDATE [User] SET FirstName = @FirstName,LastName = @LastName, MiddleName = @MiddleName, RoleWebSite = @RoleWebSite, Avatar = @Avatar
 	FROM [User]
 	WHERE (@Id = Id)
 END
@@ -296,7 +309,7 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[InsertHall]
-	@Name INT
+	@Name NVARCHAR(50)
 AS
 BEGIN	
 	INSERT INTO Hall (NameHall)
@@ -332,4 +345,16 @@ BEGIN
 	 FROM RoleWebSite 
 END
 GO
+
+CREATE PROCEDURE [dbo].[GetRoleById]
+	@Id INT
+AS
+BEGIN
+     SELECT Id, [Name]
+	 FROM RoleWebSite 
+	 WHERE @Id = Id
+END
+GO
+
+
 

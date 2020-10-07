@@ -15,5 +15,7 @@
         public byte[] HashPassword { get; set; }
 
         public int RoleWebSite { get; set; }
+
+        public byte[] Avatar { get; set; }
     }
 }

@@ -1,0 +1,41 @@
+﻿@using Epam.FitnessCenter.BLL.Interface;
+@using Epam.FitnessCenter.Ioc;
+@using Ninject;
+@{
+    Layout = "BasePages/_main.cshtml";
+    Page.Section = "userTable";
+
+    var roleWebSiteLogic = DependenciesResolver.Kernel.Get<IRoleWebSiteLogic>();
+    var userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
+}
+@section userTable{
+
+    <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add user</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">LastName</th>
+                <th scope="col" class="text-center">FirstName</th>
+                <th scope="col">MiddleName</th>
+                <th scope="col">Role</th>
+                <th colspan="3" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in userLogic.GetAll())
+            {
+                var role = roleWebSiteLogic.GetById(item.RoleWebSite);
+                <tr>
+                    <td>@item.LastName</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.MiddleName</td>
+                    <td>@role.Name</td>
+
+                    <td><a class="Edit btn btn-primary container-fluid" href="#">Edit</a></td>
+                    <td><a class="Show-@item.Id btn btn-info container-fluid centered " href="#">View all lessons</a></td>
+                    <td><a class="Delete-@item.Id btn btn-danger container-fluid" href="#">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

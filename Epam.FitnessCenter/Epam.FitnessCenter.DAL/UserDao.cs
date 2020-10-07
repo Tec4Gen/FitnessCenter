@@ -109,7 +109,7 @@ namespace Epam.FitnessCenter.DAL
                 var command = connection.CreateCommand();
 
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "@GetAllUsers";
+                command.CommandText = "dbo.GetAllUsers";
 
                 try
                 {
@@ -141,6 +141,56 @@ namespace Epam.FitnessCenter.DAL
             }
         }
 
+        public IEnumerable<User> GetAllUserByRole(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                var command = connection.CreateCommand();
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "dbo.GetUserByRole";
+
+                SqlParameter parameterId = new SqlParameter
+                {
+                    DbType = DbType.Int32,
+                    ParameterName = "@IdRole",
+                    Value = id,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterId);
+
+                SqlDataReader reader;
+                try
+                {
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+                   
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    throw;
+                }
+
+                while (reader.Read())
+                {
+                    yield return new User
+                    {
+                        Id = (int)reader["Id"],
+                        FirstName = reader["FirstName"] as string,
+                        LastName = reader["LastName"] as string,
+                        MiddleName = reader["MiddleName"] as string,
+                        RoleWebSite = (int)reader["RoleWebSite"]
+                    };
+                }
+
+                Logs.Log.Info("All user received");
+
+                yield break;
+            }
+        }
+
         public User GetById(int id)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -148,7 +198,7 @@ namespace Epam.FitnessCenter.DAL
                 var command = connection.CreateCommand();
 
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "dbo.GetuserById";
+                command.CommandText = "dbo.GetUserById";
 
                 SqlParameter parameterId = new SqlParameter
                 {

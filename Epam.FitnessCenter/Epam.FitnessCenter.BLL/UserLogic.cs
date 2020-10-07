@@ -53,6 +53,11 @@ namespace Epam.FitnessCenter.BLL
             return _userDao.GetAll();
         }
 
+        public IEnumerable<User> GetAllUserByRole(int id)
+        {
+            return _userDao.GetAllUserByRole(id);
+        }
+
         public User GetById(int id)
         {
             return _userDao.GetById(id);

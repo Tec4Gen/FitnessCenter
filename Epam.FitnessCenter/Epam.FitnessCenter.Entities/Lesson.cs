@@ -12,6 +12,6 @@ namespace Epam.FitnessCenter.Entities
 
         public DateTime DateTime { get; set; }
 
-        public string Decription { get; set; }
+        public string Description { get; set; }
     }
 }

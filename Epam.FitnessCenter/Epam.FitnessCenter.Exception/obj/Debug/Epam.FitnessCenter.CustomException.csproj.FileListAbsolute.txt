@@ -9,4 +9,3 @@ D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\bin\Debug
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.csproj.CoreCompileInputs.cache
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.dll
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.pdb
-D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Exception\obj\Debug\Epam.FitnessCenter.CustomException.csprojAssemblyReference.cache

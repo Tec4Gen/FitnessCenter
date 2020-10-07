@@ -1,0 +1,48 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+@{
+    var _hallLogic = DependenciesResolver.Kernel.Get<IHallLogic>();
+
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "addHall";
+}
+
+@section addHall {
+
+    @if (IsPost)
+    {
+
+        if (!Request["nameHall"].IsEmpty())
+        {
+
+            _hallLogic.Add(new Hall
+            {
+                NameHall = Request["nameHall"]
+            }, out ICollection<Error> listError);
+
+            if (!listError.Any())
+            {
+                <div class="alert alert-success" role="alert">
+                    Lesson successfully added
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    @foreach (var item in listError)
+                    {
+                        <span>@item.Message</span>
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">
+                Fill in all the fields
+            </div>
+        }
+    }
+}

@@ -14,5 +14,7 @@ namespace Epam.FitnessCenter.BLL.Interface
         void Update(User user, out ICollection<Error> listError);
 
         IEnumerable<User> GetAll();
+
+        IEnumerable<User> GetAllUserByRole(int id);
     }
 }

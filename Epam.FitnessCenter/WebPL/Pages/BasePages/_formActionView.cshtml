@@ -1,0 +1,12 @@
+﻿@{
+
+    Page.Section = "form";
+}
+
+<div class="container__form col-10">
+    <form action="~/Pages/@Page.Path" method="post" enctype="multipart/form-data">
+        @RenderPage($"~/Pages/BasePages/{Page.Action}")
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+</div>
+

@@ -67,6 +67,10 @@
       <Project>{03014746-7de0-4e73-aa9b-fa0b2d2d84e1}</Project>
       <Name>Epam.FitnessCenter.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Logger\Epam.FitnessCenter.Logger.csproj">
+      <Project>{E73C9DC1-B86E-41AB-8A0A-F2B31E334CAA}</Project>
+      <Name>Epam.FitnessCenter.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

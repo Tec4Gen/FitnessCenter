@@ -1,0 +1,30 @@
+﻿@using Epam.FitnessCenter.BLL.Interface;
+@using Epam.FitnessCenter.Ioc;
+@using Ninject;
+@{
+    Layout = "BasePages/_main.cshtml";
+    Page.Section = "hallTable";
+
+    var HallLogic = DependenciesResolver.Kernel.Get<IHallLogic>();
+}
+@section hallTable{
+
+    <a href="~/Pages/Add/AddHall.cshtml" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add hall</a>
+    <table id="table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Hall Name</th>        
+                <th colspan="2" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in HallLogic.GetAll())
+            {  
+                <tr>
+                    <td>@item.NameHall</td>
+                    <td><a name="btnDH" id="Delete-@item.Id" class="btn btn-danger hall-delete" href="#">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,52 @@
+﻿@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+
+@{
+    var _hallLogic = DependenciesResolver.Kernel.Get<IHallLogic>();
+    var _userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
+
+}
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<div class="form-group col-md-3">
+    <label for="inputState">Hall</label>
+    <select name="inputHall" id="inputHall" class="form-control">
+        @foreach (var item in _hallLogic.GetAll())
+        {
+            <option selected>@item.Id @item.NameHall</option>
+        }
+    </select>
+</div>
+<div class="form-group col-md-3">
+    <label for="inputState">Trainer</label>
+    <select name="inputUser" id="inputUser" class="form-control">
+
+        @foreach (var item in _userLogic.GetAllUserByRole(1))
+        {
+            <option selected>@item.Id @item.FirstName @item.LastName @item.MiddleName</option>
+        }
+    </select>
+</div>
+<div class="form-group col-md-4">
+    <label for="inputState">Time</label>
+    <input name="dateTime" id="input" width="234" />
+    <script>
+        $('#input').datetimepicker({
+            uiLibrary: 'bootstrap4',
+            modal: true,
+            footer: true
+        });
+    </script>
+</div>
+
+<div class="form-group col-md-3">
+    <label for="Description">Description</label>
+    <input name="description" class="form-control" type="text" value="">
+</div>

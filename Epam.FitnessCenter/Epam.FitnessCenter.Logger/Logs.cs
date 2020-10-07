@@ -1,10 +1,5 @@
 ﻿using log4net;
 using log4net.Config;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.FitnessCenter.Logger
 {
@@ -14,12 +9,13 @@ namespace Epam.FitnessCenter.Logger
 
         public static ILog Log
         {
-            get { return log; }
+            get
+            {
+                XmlConfigurator.Configure();
+
+                return log;
+            }
         }
 
-        public static void InitLogger()
-        {
-            XmlConfigurator.Configure();
-        }
     }
 }

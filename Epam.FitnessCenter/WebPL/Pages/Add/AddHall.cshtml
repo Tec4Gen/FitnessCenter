@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "addHall";
+    Page.Action = "_addFormHall.cshtml";
+    Page.Path = "Redirect/AddHall.cshtml";
+
+}
+
+@section addHall
+{
+    @RenderPage("~/Pages/BasePages/_formActionView.cshtml")
+}

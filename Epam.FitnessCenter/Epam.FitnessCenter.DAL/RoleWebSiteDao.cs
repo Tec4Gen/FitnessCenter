@@ -31,7 +31,7 @@ namespace Epam.FitnessCenter.DAL
 
                     while (reader.Read())
                     {
-                        listRole.Add(new RoleWebSite 
+                        listRole.Add(new RoleWebSite
                         {
                             Id = (int)reader["Id"],
                             Name = reader["RolewebSite"] as string
@@ -41,7 +41,50 @@ namespace Epam.FitnessCenter.DAL
 
                     return listRole;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    throw;
+                }
+            }
+        }
+
+        public RoleWebSite GetById(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                var command = connection.CreateCommand();
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "dbo.GetRoleById";
+
+                SqlParameter parameterId = new SqlParameter
+                {
+                    DbType = DbType.Int32,
+                    ParameterName = "@Id",
+                    Value = id,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterId);
+
+                try
+                {
+                    connection.Open();
+
+                    var reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        return new RoleWebSite
+                        {
+                            Id = (int)reader["Id"],
+                            Name = reader["Name"] as string,
+                        };
+                    }
+                    Logs.Log.Info("Role received");
+                    return null;
+                }
+                catch (Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;

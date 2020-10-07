@@ -1,0 +1,501 @@
+2020-10-07 21:39:53,584 [7] INFO  LOGGER All lesson received
+2020-10-07 21:39:56,701 [8] INFO  LOGGER All lesson received
+2020-10-07 21:39:57,801 [6] INFO  LOGGER All hall received
+2020-10-07 21:39:57,807 [6] INFO  LOGGER All user received
+2020-10-07 21:40:01,263 [8] ERROR LOGGER Procedure or function 'InsertLesson' expects parameter '@Description', which was not supplied.
+2020-10-07 21:45:19,648 [6] INFO  LOGGER All lesson received
+2020-10-07 21:45:20,949 [7] INFO  LOGGER All hall received
+2020-10-07 21:45:20,956 [7] INFO  LOGGER All user received
+2020-10-07 21:45:27,513 [7] INFO  LOGGER Lesson added
+2020-10-07 21:45:28,902 [6] INFO  LOGGER All lesson received
+2020-10-07 21:45:28,909 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:46:22,903 [5] INFO  LOGGER All lesson received
+2020-10-07 21:46:22,924 [5] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:46:26,311 [5] INFO  LOGGER All hall received
+2020-10-07 21:46:26,325 [5] INFO  LOGGER All user received
+2020-10-07 21:46:41,804 [5] INFO  LOGGER All hall received
+2020-10-07 21:46:41,807 [5] INFO  LOGGER All user received
+2020-10-07 21:46:49,935 [5] INFO  LOGGER All hall received
+2020-10-07 21:46:49,937 [5] INFO  LOGGER All user received
+2020-10-07 21:47:06,613 [5] INFO  LOGGER All lesson received
+2020-10-07 21:47:06,622 [5] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:47:08,839 [5] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:47:08,841 [5] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:47:08,843 [5] INFO  LOGGER All hall received
+2020-10-07 21:47:08,844 [5] INFO  LOGGER All user received
+2020-10-07 21:48:08,980 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:48:08,984 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:08,995 [6] INFO  LOGGER All hall received
+2020-10-07 21:48:09,000 [6] INFO  LOGGER All user received
+2020-10-07 21:48:10,897 [15] INFO  LOGGER All lesson received
+2020-10-07 21:48:10,899 [15] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:12,176 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:48:12,178 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:12,180 [6] INFO  LOGGER All hall received
+2020-10-07 21:48:12,181 [6] INFO  LOGGER All user received
+2020-10-07 21:48:13,481 [15] INFO  LOGGER All lesson received
+2020-10-07 21:48:13,483 [15] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:14,765 [6] INFO  LOGGER All hall received
+2020-10-07 21:48:14,767 [6] INFO  LOGGER All user received
+2020-10-07 21:48:29,893 [6] INFO  LOGGER All hall received
+2020-10-07 21:48:29,895 [6] INFO  LOGGER All user received
+2020-10-07 21:48:35,151 [8] INFO  LOGGER All hall received
+2020-10-07 21:48:35,157 [8] INFO  LOGGER All user received
+2020-10-07 21:48:36,208 [18] INFO  LOGGER All lesson received
+2020-10-07 21:48:36,210 [18] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:37,314 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:48:37,315 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:37,318 [6] INFO  LOGGER All hall received
+2020-10-07 21:48:37,325 [6] INFO  LOGGER All user received
+2020-10-07 21:48:48,274 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:48:48,277 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:48:48,280 [8] INFO  LOGGER All hall received
+2020-10-07 21:48:48,283 [8] INFO  LOGGER All user received
+2020-10-07 21:51:21,655 [20] INFO  LOGGER All lesson received
+2020-10-07 21:51:21,662 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:51:22,194 [17] INFO  LOGGER All lesson received
+2020-10-07 21:51:22,196 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:51:22,548 [6] INFO  LOGGER All hall received
+2020-10-07 21:51:22,551 [6] INFO  LOGGER All user received
+2020-10-07 21:51:24,447 [6] INFO  LOGGER All lesson received
+2020-10-07 21:51:24,451 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:51:24,939 [17] INFO  LOGGER All hall received
+2020-10-07 21:51:24,941 [17] INFO  LOGGER All user received
+2020-10-07 21:51:27,495 [6] INFO  LOGGER All lesson received
+2020-10-07 21:51:27,498 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:51:28,181 [17] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:51:28,183 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:51:28,185 [17] INFO  LOGGER All hall received
+2020-10-07 21:51:28,187 [17] INFO  LOGGER All user received
+2020-10-07 21:52:19,136 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 21:52:19,140 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 21:52:19,145 [6] INFO  LOGGER All hall received
+2020-10-07 21:52:19,147 [6] INFO  LOGGER All user received
+2020-10-07 22:11:28,088 [8] INFO  LOGGER All lesson received
+2020-10-07 22:11:28,109 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:00:17,684 [6] INFO  LOGGER All lesson received
+2020-10-07 23:00:17,736 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:00:23,199 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:00:23,202 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:00:23,206 [6] INFO  LOGGER All hall received
+2020-10-07 23:00:23,211 [6] INFO  LOGGER All user received
+2020-10-07 23:01:37,856 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:01:37,860 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:01:37,864 [6] INFO  LOGGER All hall received
+2020-10-07 23:01:37,880 [6] INFO  LOGGER All user received
+2020-10-07 23:01:41,136 [7] INFO  LOGGER All lesson received
+2020-10-07 23:01:41,139 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:01:42,599 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:01:42,601 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:01:42,606 [6] INFO  LOGGER All hall received
+2020-10-07 23:01:42,608 [6] INFO  LOGGER All user received
+2020-10-07 23:03:04,729 [7] INFO  LOGGER All lesson received
+2020-10-07 23:03:04,734 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:05,984 [12] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:03:05,986 [12] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:05,994 [12] INFO  LOGGER All hall received
+2020-10-07 23:03:05,997 [12] INFO  LOGGER All user received
+2020-10-07 23:03:12,506 [6] INFO  LOGGER All lesson received
+2020-10-07 23:03:12,508 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:13,584 [17] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:03:13,586 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:13,592 [17] INFO  LOGGER All hall received
+2020-10-07 23:03:13,594 [17] INFO  LOGGER All user received
+2020-10-07 23:03:17,018 [12] INFO  LOGGER All lesson received
+2020-10-07 23:03:17,025 [12] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:19,132 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:03:19,135 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:03:19,144 [7] INFO  LOGGER All hall received
+2020-10-07 23:03:19,146 [7] INFO  LOGGER All user received
+2020-10-07 23:03:25,830 [17] INFO  LOGGER All lesson received
+2020-10-07 23:03:25,834 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:24,812 [10] INFO  LOGGER All lesson received
+2020-10-07 23:10:24,821 [10] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:25,747 [19] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:10:25,748 [19] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:25,751 [19] INFO  LOGGER All hall received
+2020-10-07 23:10:25,753 [19] INFO  LOGGER All user received
+2020-10-07 23:10:29,171 [18] INFO  LOGGER All lesson received
+2020-10-07 23:10:29,174 [18] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:55,543 [13] INFO  LOGGER All lesson received
+2020-10-07 23:10:55,546 [13] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:56,622 [10] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:10:56,627 [10] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:10:56,629 [10] INFO  LOGGER All hall received
+2020-10-07 23:10:56,630 [10] INFO  LOGGER All user received
+2020-10-07 23:10:59,416 [13] INFO  LOGGER All lesson received
+2020-10-07 23:10:59,418 [13] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:19:53,661 [6] INFO  LOGGER All lesson received
+2020-10-07 23:19:53,681 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:19:55,004 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:19:55,015 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:19:55,024 [6] INFO  LOGGER All hall received
+2020-10-07 23:19:55,037 [6] INFO  LOGGER All user received
+2020-10-07 23:19:57,351 [6] INFO  LOGGER All lesson received
+2020-10-07 23:19:57,355 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:20:00,114 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:20:00,116 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:20:00,120 [11] INFO  LOGGER All hall received
+2020-10-07 23:20:00,123 [11] INFO  LOGGER All user received
+2020-10-07 23:20:03,739 [7] INFO  LOGGER All lesson received
+2020-10-07 23:20:03,742 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:21:22,518 [6] INFO  LOGGER All lesson received
+2020-10-07 23:21:22,542 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:21:23,755 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:21:23,756 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:21:23,760 [8] INFO  LOGGER All hall received
+2020-10-07 23:21:23,765 [8] INFO  LOGGER All user received
+2020-10-07 23:21:26,164 [8] INFO  LOGGER All lesson received
+2020-10-07 23:21:26,167 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:21:32,070 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:21:32,071 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:21:32,075 [8] INFO  LOGGER All hall received
+2020-10-07 23:21:32,088 [8] INFO  LOGGER All user received
+2020-10-07 23:22:24,845 [6] INFO  LOGGER All lesson received
+2020-10-07 23:22:24,873 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:22:27,943 [6] INFO  LOGGER All lesson received
+2020-10-07 23:22:27,945 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:22:32,985 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:22:32,988 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:22:32,992 [7] INFO  LOGGER All hall received
+2020-10-07 23:22:32,996 [7] INFO  LOGGER All user received
+2020-10-07 23:22:34,908 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:24:02,332 [6] INFO  LOGGER All lesson received
+2020-10-07 23:24:02,358 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:24:04,448 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:24:04,457 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:24:04,461 [6] INFO  LOGGER All hall received
+2020-10-07 23:24:04,465 [6] INFO  LOGGER All user received
+2020-10-07 23:24:05,417 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:25:32,192 [6] INFO  LOGGER All lesson received
+2020-10-07 23:25:32,212 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:25:33,475 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:25:33,478 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:25:33,481 [6] INFO  LOGGER All hall received
+2020-10-07 23:25:33,486 [6] INFO  LOGGER All user received
+2020-10-07 23:25:34,790 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:27:43,812 [6] INFO  LOGGER All lesson received
+2020-10-07 23:27:43,832 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:27:45,874 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:27:45,876 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:27:45,882 [8] INFO  LOGGER All hall received
+2020-10-07 23:27:45,886 [8] INFO  LOGGER All user received
+2020-10-07 23:27:47,417 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:49:38,902 [6] INFO  LOGGER All lesson received
+2020-10-07 23:49:38,931 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:49:45,632 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:49:45,641 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:49:45,657 [6] INFO  LOGGER All hall received
+2020-10-07 23:49:45,677 [6] INFO  LOGGER All user received
+2020-10-07 23:49:45,679 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:49:45,682 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:49:45,683 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:49:45,685 [11] INFO  LOGGER All hall received
+2020-10-07 23:49:45,687 [7] INFO  LOGGER All hall received
+2020-10-07 23:49:45,689 [11] INFO  LOGGER All user received
+2020-10-07 23:49:45,692 [7] INFO  LOGGER All user received
+2020-10-07 23:50:18,455 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:51:45,085 [6] INFO  LOGGER All lesson received
+2020-10-07 23:51:45,183 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:51:45,998 [6] INFO  LOGGER All lesson received
+2020-10-07 23:51:46,002 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:51:48,073 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:51:48,076 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:51:48,087 [8] INFO  LOGGER All hall received
+2020-10-07 23:51:48,091 [8] INFO  LOGGER All user received
+2020-10-07 23:51:49,453 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:12,957 [6] INFO  LOGGER All lesson received
+2020-10-07 23:58:12,977 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:15,003 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:15,005 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:15,008 [11] INFO  LOGGER All hall received
+2020-10-07 23:58:15,013 [11] INFO  LOGGER All user received
+2020-10-07 23:58:16,000 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:16,002 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:16,009 [7] INFO  LOGGER Lesson with Id 3 updated
+2020-10-07 23:58:20,723 [6] INFO  LOGGER All lesson received
+2020-10-07 23:58:20,726 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:22,511 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:22,516 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:22,518 [6] INFO  LOGGER All hall received
+2020-10-07 23:58:22,521 [6] INFO  LOGGER All user received
+2020-10-07 23:58:25,326 [11] INFO  LOGGER All lesson received
+2020-10-07 23:58:25,328 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:27,350 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:27,352 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-07 23:58:27,354 [6] INFO  LOGGER All hall received
+2020-10-07 23:58:27,357 [6] INFO  LOGGER All user received
+2020-10-07 23:58:28,150 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:28,152 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-07 23:58:28,156 [7] INFO  LOGGER Lesson with Id 3 updated
+2020-10-07 23:58:29,152 [6] INFO  LOGGER All lesson received
+2020-10-07 23:58:29,154 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:10:40,500 [6] INFO  LOGGER All lesson received
+2020-10-08 00:10:40,555 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:10:41,738 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:10:41,743 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:10:41,747 [6] INFO  LOGGER All hall received
+2020-10-08 00:10:41,752 [6] INFO  LOGGER All user received
+2020-10-08 00:10:43,578 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:10:43,580 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:10:43,586 [7] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:11:10,920 [6] INFO  LOGGER All lesson received
+2020-10-08 00:11:10,952 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:11:12,788 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:12,792 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:11:12,796 [6] INFO  LOGGER All hall received
+2020-10-08 00:11:12,802 [6] INFO  LOGGER All user received
+2020-10-08 00:11:14,467 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:14,470 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:14,479 [11] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:11:18,941 [7] INFO  LOGGER All lesson received
+2020-10-08 00:11:18,943 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:11:20,135 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:20,137 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:11:20,139 [6] INFO  LOGGER All hall received
+2020-10-08 00:11:20,140 [6] INFO  LOGGER All user received
+2020-10-08 00:11:21,114 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:21,116 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:11:21,118 [6] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:12:12,424 [6] INFO  LOGGER All lesson received
+2020-10-08 00:12:12,446 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:12:13,482 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:13,484 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:12:13,487 [11] INFO  LOGGER All hall received
+2020-10-08 00:12:13,491 [11] INFO  LOGGER All user received
+2020-10-08 00:12:15,363 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:15,366 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:15,371 [6] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:12:43,736 [6] INFO  LOGGER All lesson received
+2020-10-08 00:12:43,755 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:12:45,058 [12] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:45,061 [12] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:12:45,067 [12] INFO  LOGGER All hall received
+2020-10-08 00:12:45,069 [12] INFO  LOGGER All user received
+2020-10-08 00:12:46,074 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:46,076 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:12:46,081 [6] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:13:54,628 [6] INFO  LOGGER All lesson received
+2020-10-08 00:13:54,658 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:13:56,512 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:13:56,516 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:13:56,520 [6] INFO  LOGGER All hall received
+2020-10-08 00:13:56,524 [6] INFO  LOGGER All user received
+2020-10-08 00:13:58,370 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:13:58,372 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:13:58,376 [11] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:19:09,930 [6] INFO  LOGGER All lesson received
+2020-10-08 00:19:09,988 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:19:29,047 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:19:29,050 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:19:29,055 [7] INFO  LOGGER All hall received
+2020-10-08 00:19:29,060 [7] INFO  LOGGER All user received
+2020-10-08 00:19:31,092 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:19:47,739 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:20:35,390 [6] INFO  LOGGER All lesson received
+2020-10-08 00:20:35,398 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:20:36,515 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:20:36,517 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:20:36,520 [11] INFO  LOGGER All hall received
+2020-10-08 00:20:36,522 [11] INFO  LOGGER All user received
+2020-10-08 00:20:38,736 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:21:34,202 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:21:34,219 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:21:34,227 [7] INFO  LOGGER All hall received
+2020-10-08 00:21:34,235 [7] INFO  LOGGER All user received
+2020-10-08 00:21:35,780 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:21:45,131 [6] INFO  LOGGER All lesson received
+2020-10-08 00:21:45,134 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:21:46,489 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:21:46,492 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:21:46,494 [7] INFO  LOGGER All hall received
+2020-10-08 00:21:46,497 [7] INFO  LOGGER All user received
+2020-10-08 00:21:48,547 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:22:35,927 [6] INFO  LOGGER All lesson received
+2020-10-08 00:22:35,945 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:22:37,930 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:22:37,933 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:22:37,942 [6] INFO  LOGGER All hall received
+2020-10-08 00:22:37,945 [6] INFO  LOGGER All user received
+2020-10-08 00:22:40,939 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:25:51,462 [7] INFO  LOGGER All lesson received
+2020-10-08 00:25:51,464 [11] INFO  LOGGER All lesson received
+2020-10-08 00:25:51,467 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:25:51,469 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:25:55,377 [6] INFO  LOGGER All lesson received
+2020-10-08 00:25:55,379 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:25:56,653 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:25:56,655 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:25:56,657 [8] INFO  LOGGER All hall received
+2020-10-08 00:25:56,661 [8] INFO  LOGGER All user received
+2020-10-08 00:25:57,868 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:26:22,460 [6] INFO  LOGGER All lesson received
+2020-10-08 00:26:22,498 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:26:23,551 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:26:23,553 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:26:23,558 [8] INFO  LOGGER All hall received
+2020-10-08 00:26:23,564 [8] INFO  LOGGER All user received
+2020-10-08 00:26:25,302 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:26:26,808 [6] INFO  LOGGER All lesson received
+2020-10-08 00:26:26,810 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:30:34,342 [9] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:30:34,347 [9] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:30:34,354 [9] INFO  LOGGER All hall received
+2020-10-08 00:30:34,357 [9] INFO  LOGGER All user received
+2020-10-08 00:33:24,665 [7] INFO  LOGGER All lesson received
+2020-10-08 00:33:24,670 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:33:25,564 [18] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:33:25,567 [18] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:33:25,570 [18] INFO  LOGGER All hall received
+2020-10-08 00:33:25,573 [18] INFO  LOGGER All user received
+2020-10-08 00:33:26,897 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:33:29,367 [17] INFO  LOGGER All lesson received
+2020-10-08 00:33:29,370 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:33:30,599 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:33:30,601 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:33:30,604 [11] INFO  LOGGER All hall received
+2020-10-08 00:33:30,606 [11] INFO  LOGGER All user received
+2020-10-08 00:33:33,435 [17] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:33:34,782 [11] INFO  LOGGER All lesson received
+2020-10-08 00:33:34,784 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:34:59,811 [17] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:34:59,817 [17] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:34:59,824 [17] INFO  LOGGER All hall received
+2020-10-08 00:34:59,827 [17] INFO  LOGGER All user received
+2020-10-08 00:35:02,333 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:35:02,336 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:35:02,381 [11] ERROR LOGGER Procedure or function 'UpdateLesson' expects parameter '@Description', which was not supplied.
+2020-10-08 00:35:05,652 [11] INFO  LOGGER All lesson received
+2020-10-08 00:35:05,654 [11] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:35:06,853 [24] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:35:06,855 [24] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:35:06,857 [24] INFO  LOGGER All hall received
+2020-10-08 00:35:06,859 [24] INFO  LOGGER All user received
+2020-10-08 00:35:08,710 [11] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:35:09,741 [18] INFO  LOGGER All lesson received
+2020-10-08 00:35:09,744 [18] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:41:36,592 [6] INFO  LOGGER All lesson received
+2020-10-08 00:41:36,612 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:41:38,373 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:41:38,378 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:41:38,383 [6] INFO  LOGGER All hall received
+2020-10-08 00:41:38,386 [6] INFO  LOGGER All user received
+2020-10-08 00:42:59,964 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:42:59,980 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:42:59,988 [8] INFO  LOGGER All hall received
+2020-10-08 00:42:59,991 [8] INFO  LOGGER All user received
+2020-10-08 00:43:02,749 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:04,228 [6] INFO  LOGGER All user received
+2020-10-08 00:43:04,593 [9] INFO  LOGGER All lesson received
+2020-10-08 00:43:04,625 [9] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:05,788 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:05,790 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:05,792 [6] INFO  LOGGER All hall received
+2020-10-08 00:43:05,793 [6] INFO  LOGGER All user received
+2020-10-08 00:43:07,860 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:07,862 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:07,871 [7] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:43:08,905 [10] INFO  LOGGER All lesson received
+2020-10-08 00:43:08,908 [10] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:10,075 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:10,077 [7] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:10,095 [7] INFO  LOGGER All hall received
+2020-10-08 00:43:10,097 [7] INFO  LOGGER All user received
+2020-10-08 00:43:15,877 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:17,620 [6] INFO  LOGGER All lesson received
+2020-10-08 00:43:17,624 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:18,746 [10] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:18,753 [10] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:18,755 [10] INFO  LOGGER All hall received
+2020-10-08 00:43:18,758 [10] INFO  LOGGER All user received
+2020-10-08 00:43:21,108 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:21,110 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:21,120 [8] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:43:23,476 [8] INFO  LOGGER All lesson received
+2020-10-08 00:43:23,481 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:25,370 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:25,373 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:25,378 [6] INFO  LOGGER All hall received
+2020-10-08 00:43:25,387 [6] INFO  LOGGER All user received
+2020-10-08 00:43:28,158 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:28,159 [7] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:28,163 [7] INFO  LOGGER Lesson with Id 3 updated
+2020-10-08 00:43:29,638 [8] INFO  LOGGER All lesson received
+2020-10-08 00:43:29,642 [8] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:30,981 [6] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:30,986 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:43:30,990 [6] INFO  LOGGER All hall received
+2020-10-08 00:43:30,992 [6] INFO  LOGGER All user received
+2020-10-08 00:43:38,527 [8] INFO  LOGGER Lesson with - 3 Received
+2020-10-08 00:43:40,443 [6] INFO  LOGGER All user received
+2020-10-08 00:43:45,309 [6] INFO  LOGGER All user received
+2020-10-08 00:43:46,877 [6] INFO  LOGGER All user received
+2020-10-08 00:43:47,222 [9] INFO  LOGGER All lesson received
+2020-10-08 00:43:47,227 [9] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:50:52,355 [20] INFO  LOGGER All lesson received
+2020-10-08 00:50:52,360 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:50:55,010 [20] INFO  LOGGER All lesson received
+2020-10-08 00:50:55,012 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:50:55,655 [22] INFO  LOGGER All user received
+2020-10-08 00:50:56,626 [20] INFO  LOGGER All lesson received
+2020-10-08 00:50:56,628 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:50:58,758 [23] INFO  LOGGER All lesson received
+2020-10-08 00:50:58,760 [23] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:51:20,322 [20] INFO  LOGGER All lesson received
+2020-10-08 00:51:20,328 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:51:20,602 [24] INFO  LOGGER All user received
+2020-10-08 00:51:39,411 [20] INFO  LOGGER All hall received
+2020-10-08 00:51:40,373 [32] INFO  LOGGER All user received
+2020-10-08 00:51:41,403 [20] INFO  LOGGER All lesson received
+2020-10-08 00:51:41,405 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:51:42,413 [24] INFO  LOGGER All user received
+2020-10-08 00:54:31,522 [20] INFO  LOGGER All user received
+2020-10-08 00:54:40,262 [23] INFO  LOGGER All hall received
+2020-10-08 00:54:41,226 [20] INFO  LOGGER All lesson received
+2020-10-08 00:54:41,231 [20] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:54:42,979 [23] INFO  LOGGER All lesson received
+2020-10-08 00:54:42,980 [23] INFO  LOGGER Hall with - 1 Received
+2020-10-08 00:54:43,940 [20] INFO  LOGGER All user received
+2020-10-08 00:54:44,271 [30] INFO  LOGGER All hall received
+2020-10-08 01:07:02,744 [6] INFO  LOGGER All user received
+2020-10-08 01:07:03,283 [10] INFO  LOGGER All hall received
+2020-10-08 01:08:29,667 [6] INFO  LOGGER All hall received
+2020-10-08 01:08:34,130 [6] ERROR LOGGER Error converting data type nvarchar to int.
+2020-10-08 01:09:58,911 [9] INFO  LOGGER All user received
+2020-10-08 01:10:02,101 [7] INFO  LOGGER All user received
+2020-10-08 01:10:02,401 [13] INFO  LOGGER All hall received
+2020-10-08 01:10:04,816 [7] INFO  LOGGER Hall added
+2020-10-08 01:10:06,163 [13] INFO  LOGGER All user received
+2020-10-08 01:10:06,484 [11] INFO  LOGGER All hall received
+2020-10-08 01:11:23,430 [6] INFO  LOGGER All hall received
+2020-10-08 01:12:18,164 [6] INFO  LOGGER All hall received
+2020-10-08 01:12:37,239 [6] INFO  LOGGER All hall received
+2020-10-08 01:13:25,114 [7] INFO  LOGGER All hall received
+2020-10-08 01:21:59,161 [7] INFO  LOGGER All hall received
+2020-10-08 01:27:42,051 [6] INFO  LOGGER All hall received
+2020-10-08 01:29:03,494 [5] INFO  LOGGER All hall received
+2020-10-08 01:29:37,897 [7] INFO  LOGGER All hall received
+2020-10-08 01:29:49,585 [6] INFO  LOGGER All lesson received
+2020-10-08 01:29:49,596 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 01:33:09,146 [6] INFO  LOGGER All hall received
+2020-10-08 01:33:18,135 [14] INFO  LOGGER All hall received
+2020-10-08 01:33:19,861 [6] INFO  LOGGER All hall received
+2020-10-08 01:33:20,370 [14] INFO  LOGGER All hall received
+2020-10-08 01:33:20,655 [6] INFO  LOGGER All hall received
+2020-10-08 01:33:21,040 [14] INFO  LOGGER All hall received
+2020-10-08 01:33:21,265 [6] INFO  LOGGER All hall received
+2020-10-08 01:33:44,119 [5] INFO  LOGGER All hall received
+2020-10-08 01:33:57,915 [5] INFO  LOGGER All hall received
+2020-10-08 01:33:58,586 [8] INFO  LOGGER All hall received
+2020-10-08 01:34:13,109 [5] INFO  LOGGER All hall received
+2020-10-08 01:34:13,935 [8] INFO  LOGGER All hall received
+2020-10-08 01:34:24,735 [6] INFO  LOGGER All hall received
+2020-10-08 01:35:26,794 [6] INFO  LOGGER All hall received
+2020-10-08 01:35:30,335 [6] INFO  LOGGER Hall with - 1 Received
+2020-10-08 01:35:30,356 [6] INFO  LOGGER Hall with Id 1 deleted
+2020-10-08 01:35:31,824 [6] INFO  LOGGER All hall received
+2020-10-08 01:35:37,938 [7] INFO  LOGGER All user received
+2020-10-08 01:35:38,610 [6] INFO  LOGGER All hall received
+2020-10-08 01:35:40,670 [7] INFO  LOGGER Hall with - 2 Received
+2020-10-08 01:35:40,676 [7] INFO  LOGGER Hall with Id 2 deleted
+2020-10-08 01:35:42,243 [6] INFO  LOGGER All hall received

@@ -43,7 +43,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.11\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +62,24 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,6 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,12 +102,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Pages\Index.cshtml" />
+    <Content Include="Pages\BasePages\_main.cshtml" />
+    <Content Include="Pages\TimeTable.cshtml" />
+    <Content Include="Pages\Users.cshtml" />
+    <Content Include="Pages\Hall.cshtml" />
+    <Content Include="Pages\BasePages\_formActionView.cshtml" />
+    <Content Include="Pages\Add\AddLesson.cshtml" />
+    <Content Include="Pages\BasePages\_addFormLesson.cshtml" />
+    <Content Include="Pages\Add\EditLesson.cshtml" />
+    <Content Include="Pages\BasePages\_editFormLesson.cshtml" />
+    <Content Include="Scripts\DeleteAction.js" />
+    <Content Include="Pages\Redirect\DeleteLesson.cshtml" />
+    <Content Include="Pages\Redirect\AddLesson.cshtml" />
+    <Content Include="Pages\Redirect\EditLesson.cshtml" />
+    <Content Include="Pages\Add\AddHall.cshtml" />
+    <Content Include="Pages\BasePages\_addFormHall.cshtml" />
+    <Content Include="Pages\Redirect\AddHall.cshtml" />
+    <Content Include="Pages\Redirect\DeleteHall.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.FitnessCenter.BLL.Interface\Epam.FitnessCenter.BLL.Interface.csproj">
+      <Project>{13eb2ce1-993f-4fbc-96c3-546c07414e6c}</Project>
+      <Name>Epam.FitnessCenter.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Ioc\Epam.FitnessCenter.Ioc.csproj">
+      <Project>{4c66402e-6065-4b4d-9ffb-3493fffac6d9}</Project>
+      <Name>Epam.FitnessCenter.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Logger\Epam.FitnessCenter.Logger.csproj">
+      <Project>{E73C9DC1-B86E-41AB-8A0A-F2B31E334CAA}</Project>
+      <Name>Epam.FitnessCenter.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

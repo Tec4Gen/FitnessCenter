@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "addLesson";
+    Page.Action = "_addFormLesson.cshtml";
+    Page.Path = "Redirect/AddLesson.cshtml";
+
+}
+
+@section addLesson
+{
+    @RenderPage("~/Pages/BasePages/_formActionView.cshtml")
+}

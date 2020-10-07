@@ -53,7 +53,7 @@ namespace Epam.FitnessCenter.DAL
                 {
                     DbType = DbType.String,
                     ParameterName = "@Description",
-                    Value = lesson.Decription,
+                    Value = lesson.Description,
                     Direction = ParameterDirection.Input
                 };
                 commnad.Parameters.Add(parameterDescription);
@@ -81,7 +81,7 @@ namespace Epam.FitnessCenter.DAL
                 var command = connection.CreateCommand();
 
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "dbo.GetAllLesson";
+                command.CommandText = "dbo.GetAllLessons";
 
                 try
                 {
@@ -99,7 +99,7 @@ namespace Epam.FitnessCenter.DAL
                             IdHall = (int)reader["IdHall"],
                             IdUserCoach = (int)reader["IdUserCoach"],
                             DateTime = (DateTime)reader["DateTime"],
-                            Decription = reader["Decription"] as string
+                            Description = reader["Description"] as string
                         });
                     }
                     Logs.Log.Info("All lesson received");
@@ -146,7 +146,7 @@ namespace Epam.FitnessCenter.DAL
                             IdHall = (int)reader["IdHall"],
                             IdUserCoach = (int)reader["IdUserCoach"],
                             DateTime = (DateTime)reader["DateTime"],
-                            Decription = reader["Decription"] as string
+                            Description = reader["Description"] as string
                         };
                     }
                     return null;
@@ -242,7 +242,7 @@ namespace Epam.FitnessCenter.DAL
                 {
                     DbType = DbType.String,
                     ParameterName = "@Description",
-                    Value = lesson.Decription,
+                    Value = lesson.Description,
                     Direction = ParameterDirection.Input
                 };
                 command.Parameters.Add(parameterDescription);

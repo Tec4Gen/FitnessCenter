@@ -1,0 +1,38 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+@{
+    var _hallLogic = DependenciesResolver.Kernel.Get<IHallLogic>();
+
+
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "deleteHall";
+}
+
+@section deleteHall {
+
+    @if (IsPost)
+    {
+        int.TryParse(Request["HallId"], out int id);
+
+        _hallLogic.Remove(id, out ICollection<Error> listError);
+
+        if (!listError.Any())
+        {
+            <div class="alert alert-success" role="alert">
+                Hall Successfully deleted
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">
+                @foreach (var item in listError)
+                {
+                    <span>@item.Message</span>
+                }
+            </div>
+        }
+
+    }
+}
