@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IHallDao.cs" />
     <Compile Include="ILessonDao.cs" />
+    <Compile Include="IMyRoleProviderDao.cs" />
     <Compile Include="IRoleWebSiteDao.cs" />
     <Compile Include="IUserDao.cs" />
     <Compile Include="IUsersLessonDao.cs" />

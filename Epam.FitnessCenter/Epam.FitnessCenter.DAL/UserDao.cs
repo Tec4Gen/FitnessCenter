@@ -102,6 +102,52 @@ namespace Epam.FitnessCenter.DAL
             }
         }
 
+        public bool Auth(User user)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                var command = connection.CreateCommand();
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "dbo.AuthUser";
+
+                SqlParameter parameterLogin = new SqlParameter
+                {
+                    DbType = DbType.String,
+                    ParameterName = "@Login",
+                    Value = user.Login,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterLogin);
+
+                SqlParameter parameterHashPassword = new SqlParameter
+                {
+                    DbType = DbType.Binary,
+                    ParameterName = "@HashPassword",
+                    Value = user.HashPassword,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterHashPassword);
+
+                try
+                {
+                    connection.Open();
+                    if ((int)command.ExecuteScalar() > 0)
+                    {
+                        Logs.Log.Info("User auth");
+                        return true;
+                    }
+                    return false;
+
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    return false;
+                }
+            }
+        }
+
         public IEnumerable<User> GetAll()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -110,34 +156,34 @@ namespace Epam.FitnessCenter.DAL
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "dbo.GetAllUsers";
+                SqlDataReader reader;
 
                 try
                 {
                     connection.Open();
 
-                    var reader = command.ExecuteReader();
-
-                    var listUsers = new List<User>();
-
-                    while (reader.Read())
-                    {
-                        listUsers.Add(new User 
-                        {
-                            Id = (int)reader["Id"],
-                            FirstName = reader["FirstName"] as string,
-                            LastName = reader["LastName"] as string,
-                            MiddleName = reader["MiddleName"] as string,
-                            RoleWebSite = (int)reader["RoleWebSite"]
-                         });
-                    }
-                    Logs.Log.Info("All user received");
-                    return listUsers;
+                    reader = command.ExecuteReader();                
                 }
                 catch(Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
-                }  
+                }
+
+                while (reader.Read())
+                {
+                    yield return new User
+                    {
+                        Id = (int)reader["Id"],
+                        FirstName = reader["FirstName"] as string,
+                        LastName = reader["LastName"] as string,
+                        MiddleName = reader["MiddleName"] as string,
+                        RoleWebSite = (int)reader["RoleWebSite"]
+                    };
+                }
+                Logs.Log.Info("All user received");
+
+                yield break;
             }
         }
 
@@ -292,7 +338,7 @@ namespace Epam.FitnessCenter.DAL
                 SqlParameter parameterFirstName = new SqlParameter 
                 {
                     DbType = DbType.String,
-                    ParameterName = "@FistName",
+                    ParameterName = "@FirstName",
                     Value = user.FirstName,
                     Direction = ParameterDirection.Input
                 };
@@ -301,7 +347,7 @@ namespace Epam.FitnessCenter.DAL
                 SqlParameter parameterLastName = new SqlParameter 
                 {
                     DbType = DbType.String,
-                    ParameterName = "LastName",
+                    ParameterName = "@LastName",
                     Value = user.LastName,
                     Direction = ParameterDirection.Input
                 };
@@ -311,7 +357,7 @@ namespace Epam.FitnessCenter.DAL
                 SqlParameter parameterMiddleName = new SqlParameter
                 {
                     DbType = DbType.String,
-                    ParameterName = "MiddleName",
+                    ParameterName = "@MiddleName",
                     Value = user.MiddleName,
                     Direction = ParameterDirection.Input
                 };
@@ -320,8 +366,8 @@ namespace Epam.FitnessCenter.DAL
                 SqlParameter parameterRoleWebSite = new SqlParameter
                 {
                     DbType = DbType.Int32,
-                    ParameterName = "RoleWebSite",
-                    Value = user.MiddleName,
+                    ParameterName = "@RoleWebSite",
+                    Value = user.RoleWebSite,
                     Direction = ParameterDirection.Input
                 };
                 command.Parameters.Add(parameterRoleWebSite);

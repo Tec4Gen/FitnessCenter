@@ -357,4 +357,19 @@ END
 GO
 
 
+CREATE PROCEDURE [dbo].[GetRolesForUser]
+	@UserName NVARCHAR(50)
+AS
+BEGIN
+
+SELECT rol.[Name]
+FROM [User]
+ INNER JOIN RoleWebSite rol
+ ON [User].RoleWebSite = rol.Id;
+     
+END
+GO
+
+
+
 

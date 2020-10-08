@@ -83,33 +83,34 @@ namespace Epam.FitnessCenter.DAL
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "dbo.GetAllLessons";
 
+                SqlDataReader reader;
                 try
                 {
-                    connection.Open();
+                   connection.Open();
 
-                    var reader = command.ExecuteReader();
-
-                    var lessonList = new List<Lesson>();
-
-                    while (reader.Read())
-                    {
-                        lessonList.Add(new Lesson
-                        {
-                            Id = (int)reader["Id"],
-                            IdHall = (int)reader["IdHall"],
-                            IdUserCoach = (int)reader["IdUserCoach"],
-                            DateTime = (DateTime)reader["DateTime"],
-                            Description = reader["Description"] as string
-                        });
-                    }
-                    Logs.Log.Info("All lesson received");
-                    return lessonList;
+                   reader = command.ExecuteReader();
+                   
                 }
                 catch (Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
                 }
+
+                while (reader.Read())
+                {
+                   yield return new Lesson
+                    {
+                        Id = (int)reader["Id"],
+                        IdHall = (int)reader["IdHall"],
+                        IdUserCoach = (int)reader["IdUserCoach"],
+                        DateTime = (DateTime)reader["DateTime"],
+                        Description = reader["Description"] as string
+                    };
+                }
+                Logs.Log.Info("All lesson received");
+
+                yield break;
             }
         }
 

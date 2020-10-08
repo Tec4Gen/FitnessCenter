@@ -12,7 +12,7 @@ namespace Epam.FitnessCenter.BLL.Interface
         void Remove(int id, out ICollection<Error> listError);
 
         void Update(User user, out ICollection<Error> listError);
-
+        bool Auth(User user);
         IEnumerable<User> GetAll();
 
         IEnumerable<User> GetAllUserByRole(int id);

@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "editUser";
+    Page.Action = "_editFormUser.cshtml";
+    Page.Path = "Redirect/EditUser.cshtml";
+
+
+}
+
+@section editUser
+{
+    @RenderPage("~/Pages/BasePages/_formActionView.cshtml")
+}

@@ -21,31 +21,32 @@ namespace Epam.FitnessCenter.DAL
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "dbo.GetAllRole";
 
+                SqlDataReader reader;
+
                 try
                 {
                     connection.Open();
 
-                    var reader = command.ExecuteReader();
-
-                    var listRole = new List<RoleWebSite>();
-
-                    while (reader.Read())
-                    {
-                        listRole.Add(new RoleWebSite
-                        {
-                            Id = (int)reader["Id"],
-                            Name = reader["RolewebSite"] as string
-                        });
-                    }
-                    Logs.Log.Info($"All Role Received");
-
-                    return listRole;
+                    reader = command.ExecuteReader();
+                   
                 }
                 catch (Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
                 }
+
+                while (reader.Read())
+                {
+                    yield return new RoleWebSite
+                    {
+                        Id = (int)reader["Id"],
+                        Name = reader["Name"] as string
+                    };
+                }
+                Logs.Log.Info($"All Role Received");
+
+                yield break;
             }
         }
 

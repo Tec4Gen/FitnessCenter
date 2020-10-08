@@ -1,0 +1,62 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+
+@{
+    var _userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
+
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "addUser";
+}
+
+@section addUser {
+
+    @if (IsPost)
+    {
+
+        if (!Request["lastName"].IsEmpty() &&
+            !Request["firstName"].IsEmpty() &&
+            !Request["middleName"].IsEmpty() &&
+            !Request["login"].IsEmpty() &&
+            !Request["password"].IsEmpty() &&
+            int.TryParse(Request["role"].Split(' ')[0], out int idRole))
+        {
+            System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+            byte[] password = encoding.GetBytes(Request["password"]);
+
+            _userLogic.Add(new User
+            {
+                FirstName = Request["firstName"],
+                LastName = Request["lastName"],
+                MiddleName = Request["middleName"],
+                Login = Request["login"],
+                HashPassword = password,
+                RoleWebSite = idRole
+
+            }, out ICollection<Error> listError);
+
+            if (!listError.Any())
+            {
+                <div class="alert alert-success" role="alert">
+                    User successfully added
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    @foreach (var item in listError)
+                    {
+                        <span>@item.Message</span>
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">
+                Fill in all the fields
+            </div>
+        }
+    }
+}

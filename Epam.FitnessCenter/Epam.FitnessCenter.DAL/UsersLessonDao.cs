@@ -81,32 +81,33 @@ namespace Epam.FitnessCenter.DAL
                     Direction = ParameterDirection.Input
                 };
                 command.Parameters.Add(parameterIdUser);
-
+                SqlDataReader reader;
                 try
                 {
                     connection.Open();
 
-                    var reader = command.ExecuteReader();
+                    reader = command.ExecuteReader();
 
-                    var listUsersLesson = new List<UsersLesson>();
-
-                    while (reader.Read())
-                    {
-                        listUsersLesson.Add(new UsersLesson
-                        {
-                            Id = (int)reader["Id"],
-                            IdUser = (int)reader["IdUser"],
-                            IdLesson = (int)reader["IdLesson"]
-                        });
-                    }
-                    Logs.Log.Info($"All Lesson with IdUser {idUser} Received");
-                    return listUsersLesson;
+                   
                 }
                 catch (Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
                 }
+
+                while (reader.Read())
+                {
+                    yield return new UsersLesson
+                    {
+                        Id = (int)reader["Id"],
+                        IdUser = (int)reader["IdUser"],
+                        IdLesson = (int)reader["IdLesson"]
+                    };
+                }
+                Logs.Log.Info($"All Lesson with IdUser {idUser} Received");
+
+                yield break;
             }
         }
 
@@ -128,31 +129,33 @@ namespace Epam.FitnessCenter.DAL
                 };
                 command.Parameters.Add(parameterId);
 
+                SqlDataReader reader;
+
                 try
                 {
                     connection.Open();
 
-                    var reader = command.ExecuteReader();
+                    reader = command.ExecuteReader();
 
-                    var listUsersLesson = new List<UsersLesson>();
-
-                    while (reader.Read())
-                    {
-                        listUsersLesson.Add(new UsersLesson
-                        {
-                            Id = (int)reader["Id"],
-                            IdUser = (int)reader["IdUser"],
-                            IdLesson = (int)reader["IdLesson"]
-                        });
-                    }
-                    Logs.Log.Info($"All Users with IdLesson {idLesson} Received");
-                    return listUsersLesson;
                 }
                 catch(Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
                 }
+
+                while (reader.Read())
+                {
+                    yield return new UsersLesson
+                    {
+                        Id = (int)reader["Id"],
+                        IdUser = (int)reader["IdUser"],
+                        IdLesson = (int)reader["IdLesson"]
+                    };
+                }
+                Logs.Log.Info($"All Users with IdLesson {idLesson} Received");
+
+                yield break;
             }
         }
 

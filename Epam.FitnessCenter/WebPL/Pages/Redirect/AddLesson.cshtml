@@ -24,7 +24,7 @@
                 IdHall = idHall,
                 IdUserCoach = idUser,
                 DateTime = date,
-                Decription = Request["description"]
+                Description = Request["description"]
             }, out ICollection<Error> listError); ;
 
             if (!listError.Any())

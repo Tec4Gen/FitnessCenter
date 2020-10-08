@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "addUser";
+    Page.Action = "_addFormUser.cshtml";
+    Page.Path = "Redirect/AddUser.cshtml";
+
+}
+
+@section addUser
+{
+    @RenderPage("~/Pages/BasePages/_formActionView.cshtml")
+}

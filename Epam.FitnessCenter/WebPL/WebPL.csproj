@@ -94,10 +94,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\ActionDelete.js" />
     <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modal\MyRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +114,6 @@
     <Content Include="Pages\BasePages\_addFormLesson.cshtml" />
     <Content Include="Pages\Add\EditLesson.cshtml" />
     <Content Include="Pages\BasePages\_editFormLesson.cshtml" />
-    <Content Include="Scripts\DeleteAction.js" />
     <Content Include="Pages\Redirect\DeleteLesson.cshtml" />
     <Content Include="Pages\Redirect\AddLesson.cshtml" />
     <Content Include="Pages\Redirect\EditLesson.cshtml" />
@@ -120,6 +121,15 @@
     <Content Include="Pages\BasePages\_addFormHall.cshtml" />
     <Content Include="Pages\Redirect\AddHall.cshtml" />
     <Content Include="Pages\Redirect\DeleteHall.cshtml" />
+    <Content Include="Pages\Add\AddUser.cshtml" />
+    <Content Include="Pages\BasePages\_addFormUser.cshtml" />
+    <Content Include="Pages\Redirect\AddUser.cshtml" />
+    <Content Include="Pages\Add\EditUser.cshtml" />
+    <Content Include="Pages\BasePages\_editFormUser.cshtml" />
+    <Content Include="Pages\Redirect\EditUser.cshtml" />
+    <Content Include="Pages\Redirect\DeleteUser.cshtml" />
+    <Content Include="Pages\SingIn.cshtml" />
+    <Content Include="Pages\UsersLessons.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -131,6 +141,10 @@
     <ProjectReference Include="..\Epam.FitnessCenter.BLL.Interface\Epam.FitnessCenter.BLL.Interface.csproj">
       <Project>{13eb2ce1-993f-4fbc-96c3-546c07414e6c}</Project>
       <Name>Epam.FitnessCenter.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.BLL\Epam.FitnessCenter.BLL.csproj">
+      <Project>{39099F3D-B2DD-4BF7-8121-CE1D9568E641}</Project>
+      <Name>Epam.FitnessCenter.BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Epam.FitnessCenter.Ioc\Epam.FitnessCenter.Ioc.csproj">
       <Project>{4c66402e-6065-4b4d-9ffb-3493fffac6d9}</Project>

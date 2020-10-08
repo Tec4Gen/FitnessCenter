@@ -4,6 +4,7 @@ using Epam.FitnessCenter.DAL.Interface;
 using Epam.FitnessCenter.Entities;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Epam.FitnessCenter.BLL
 {
@@ -22,6 +23,11 @@ namespace Epam.FitnessCenter.BLL
 
             try
             {
+                using (SHA256 mySHA256 = SHA256.Create())
+                {
+                    byte[] hashValue = mySHA256.ComputeHash(user.HashPassword);
+                    user.HashPassword = hashValue;
+                }
                 _userDao.Add(user);
             }
             catch (UniqueIdentifierException ex)
@@ -46,6 +52,11 @@ namespace Epam.FitnessCenter.BLL
                 });
             }
 
+        }
+
+        public bool Auth(User user)
+        {
+            return _userDao.Auth(user); ;
         }
 
         public IEnumerable<User> GetAll()

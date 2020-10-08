@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IHallLogic.cs" />
     <Compile Include="ILessonLogic.cs" />
+    <Compile Include="IMyRoleProviderLogic.cs" />
     <Compile Include="IRoleWebSiteLogic.cs" />
     <Compile Include="IUserLogic.cs" />
     <Compile Include="IUsersLessonLogic.cs" />

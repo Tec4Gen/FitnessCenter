@@ -9,9 +9,7 @@
     var userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
 }
 @section userTable{
-
-    <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add user</a>
-    <table class="table table-bordered">
+    <table id="table" class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col">LastName</th>
@@ -31,9 +29,9 @@
                     <td>@item.MiddleName</td>
                     <td>@role.Name</td>
 
-                    <td><a class="Edit btn btn-primary container-fluid" href="#">Edit</a></td>
-                    <td><a class="Show-@item.Id btn btn-info container-fluid centered " href="#">View all lessons</a></td>
-                    <td><a class="Delete-@item.Id btn btn-danger container-fluid" href="#">Delete</a></td>
+                    <td><a class="Edit btn btn-primary container-fluid" href="~/Pages/Add/EditUser.cshtml?IdUser=@item.Id">Edit</a></td>
+                    <td><a class="Show-@item.Id btn btn-info container-fluid centered " href="~/Pages/UsersLessons.cshtml?IdUser=@item.Id">View all lessons</a></td>
+                    <td><a name="btnDU" id="Delete-@item.Id" class="btn btn-danger container-fluid" href="#">Delete</a></td>
                 </tr>
             }
         </tbody>

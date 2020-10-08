@@ -17,6 +17,8 @@ namespace Epam.FitnessCenter.DAL.Interface
 
         void Update(User user);
 
+        bool Auth(User user);
+
         IEnumerable<User> GetAll();
 
         IEnumerable<User> GetAllUserByRole(int id);

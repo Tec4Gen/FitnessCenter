@@ -15,12 +15,14 @@ namespace Epam.FitnessCenter.Ioc
             Bind<ILessonDao>().To<LessonDao>();
             Bind<IUsersLessonDao>().To<UsersLessonDao>();
             Bind<IRoleWebSiteDao>().To<RoleWebSiteDao>();
-            
+            Bind<IMyRoleProviderDao>().To<MyRoleProviderDao>();
+
             Bind<IUserLogic>().To<UserLogic>();
             Bind<IHallLogic>().To<HallLogic>();
             Bind<ILessonLogic>().To<LessonLogic>();
             Bind<IUsersLessonLogic>().To<UsersLessonLogic>();
             Bind<IRoleWebSiteLogic>().To<RoleWebSiteLogic>();
+            Bind<IMyRoleProviderLogic>().To<MyRoleProviderLogic>();
         }
     }
 }

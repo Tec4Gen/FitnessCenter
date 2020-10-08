@@ -24,6 +24,17 @@
                 <a class="nav-item nav-link" href="~/Pages/TimeTable.cshtml">TimeTable</a>
                 <a class="nav-item nav-link" href="~/Pages/Users.cshtml">Users</a>
                 <a class="nav-item nav-link " href="~/Pages/Hall.cshtml">Hall</a>
+
+                @*@if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-item nav-link " href="~/Pages/SingIn.cshtml">SingIn</a>
+                    <a class="nav-item nav-link " href="~/Pages/SingUp.cshtml">SingUp</a>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-item nav-link " href="~/Pages/SingIn.cshtml">Sing Out</a>
+                }*@
+
             </div>
         </div>
     </nav>

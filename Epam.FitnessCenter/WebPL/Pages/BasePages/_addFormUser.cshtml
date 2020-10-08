@@ -1,0 +1,43 @@
+﻿@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+
+@{
+    var _roleLogic = DependenciesResolver.Kernel.Get<IRoleWebSiteLogic>();
+}
+
+<div class="form-group col-md-3">
+    <label for="LastName">LastName</label>
+    <input name="lastName" class="form-control" type="text" value="">
+</div>
+<div class="form-group col-md-3">
+    <label for="FirstName">FirstName</label>
+    <input name="firstName" class="form-control" type="text" value="">
+</div>
+<div class="form-group col-md-4">
+    <label for="MiddleName">MiddleName</label>
+    <input name="middleName" class="form-control" type="text" value="">
+</div>
+
+<div class="form-group col-md-3">
+    <label for="Login">Login</label>
+    <input name="login" class="form-control" type="text" value="">
+</div>
+
+<div class="form-group col-md-3">
+    <label for="Password">Password</label>
+    <input name="password" class="form-control" type="password" value="">
+</div>
+
+<div class="form-group col-md-3">
+    <label for="Role">Role</label>
+
+    <select name="role" id="inputHall" class="form-control">
+        <option selected></option>
+        @foreach (var item in _roleLogic.GetAll())
+        {
+            <option>@item.Id @item.Name</option>
+        }
+    </select>
+</div>

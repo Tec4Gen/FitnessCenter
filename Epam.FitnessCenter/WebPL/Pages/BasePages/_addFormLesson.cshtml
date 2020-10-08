@@ -18,6 +18,7 @@
 <div class="form-group col-md-3">
     <label for="inputState">Hall</label>
     <select name="inputHall" id="inputHall" class="form-control">
+        <option selected></option>
         @foreach (var item in _hallLogic.GetAll())
         {
             <option selected>@item.Id @item.NameHall</option>
@@ -27,8 +28,8 @@
 <div class="form-group col-md-3">
     <label for="inputState">Trainer</label>
     <select name="inputUser" id="inputUser" class="form-control">
-
-        @foreach (var item in _userLogic.GetAllUserByRole(1))
+        <option selected></option>
+        @foreach (var item in _userLogic.GetAllUserByRole(4))
         {
             <option selected>@item.Id @item.FirstName @item.LastName @item.MiddleName</option>
         }

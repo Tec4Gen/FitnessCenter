@@ -1,4 +1,4 @@
-﻿﻿let table = document.querySelector('#table');
+﻿let table = document.querySelector('#table');
 let body = document.querySelector("body");
 let modal = document.getElementById('fixed-overlay');
 let mainBtn_close = document.getElementById("b__close__edit");
@@ -17,9 +17,13 @@ function actionModal(event) {
         modal.classList.toggle("show");
     }
     if (target.name === 'btnDH') {
-        console.log(1);
         let id = target.id.split('-')[1];
         form.action = `Redirect/DeleteHall.cshtml?HallId=${id}`;
+        modal.classList.toggle("show");
+    }
+    if (target.name === 'btnDU') {
+        let id = target.id.split('-')[1];
+        form.action = `Redirect/DeleteUser.cshtml?UserId=${id}`;
         modal.classList.toggle("show");
     }
 }

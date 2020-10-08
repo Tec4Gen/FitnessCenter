@@ -58,31 +58,30 @@ namespace Epam.FitnessCenter.DAL
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "dbo.GetAllHall";
 
+                SqlDataReader reader;
                 try
                 {
                     connection.Open();
 
-                    var reader = command.ExecuteReader();
-
-                    var hallList = new List<Hall>();
-
-                    while (reader.Read())
-                    {
-                        hallList.Add(new Hall
-                        {
-                            Id = (int)reader["Id"],
-                            NameHall = reader["NameHall"] as string
-                        });
-                    }
-                    Logs.Log.Info("All hall received");
-
-                    return hallList;
+                    reader = command.ExecuteReader();
                 }
                 catch (Exception ex)
                 {
                     Logs.Log.Error(ex.Message);
                     throw;
                 }
+
+                while (reader.Read())
+                {
+                    yield return new Hall
+                    {
+                        Id = (int)reader["Id"],
+                        NameHall = reader["NameHall"] as string
+                    };
+                }
+                Logs.Log.Info("All hall received");
+
+                yield break;   
             }
         }
 

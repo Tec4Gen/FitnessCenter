@@ -1,0 +1,90 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+@{
+    var _userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
+
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "EditUser";
+}
+
+@section EditUser{
+
+    @if (IsPost)
+    {
+        int.TryParse(Request["IdUser"], out int IdUser);
+
+        bool flag = false;
+
+        if (IdUser > 0)
+        {
+            var user = _userLogic.GetById(IdUser);
+
+            int.TryParse(Request["role"].Split(' ')[0], out int IdRole);
+
+            if (!Request["firstName"].IsEmpty())
+            {
+                user.FirstName = Request["firstName"];
+                flag = true;
+            }
+            if (!Request["lasttName"].IsEmpty())
+            {
+                user.LastName = Request["lastName"];
+                flag = true;
+            }
+            if (!Request["middleName"].IsEmpty())
+            {
+                user.MiddleName = Request["middleName"];
+                flag = true;
+            }
+            if (!Request["password"].IsEmpty())
+            {
+                System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+                byte[] password = encoding.GetBytes(Request["password"]);
+
+                user.HashPassword = password;
+                flag = true;
+            }
+
+            if (IdRole > 0)
+            {
+                user.RoleWebSite = IdRole;
+                flag = true;
+            }
+
+         
+            if (flag)
+            {
+                _userLogic.Update(user, out ICollection<Error> listError);
+                if (!listError.Any())
+                {
+                    <div class="alert alert-success" role="alert">
+                        User successfully update
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @foreach (var item in listError)
+                        {
+                            <span>@item.Message</span>
+                        }
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="alert alert-warning" role="alert">
+                    The record is not changed
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">
+                You can not do it this way :(
+            </div>
+        }
+    }
+}

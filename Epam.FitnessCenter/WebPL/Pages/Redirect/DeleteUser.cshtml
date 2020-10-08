@@ -1,0 +1,38 @@
+﻿@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject;
+@{
+    var _userogic = DependenciesResolver.Kernel.Get<IUserLogic>();
+
+
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "deleteUser";
+}
+
+@section deleteUser {
+
+    @if (IsPost)
+    {
+        int.TryParse(Request["UserId"], out int id);
+
+        _userogic.Remove(id, out ICollection<Error> listError);
+
+        if (!listError.Any())
+        {
+            <div class="alert alert-success" role="alert">
+                User Successfully deleted
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">
+                @foreach (var item in listError)
+                {
+                    <span>@item.Message</span>
+                }
+            </div>
+        }
+
+    }
+}
