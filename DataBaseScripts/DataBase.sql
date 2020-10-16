@@ -370,6 +370,18 @@ FROM [User]
 END
 GO
 
+CREATE PROCEDURE [dbo].[CheckUser]
+	@Login NVARCHAR(50),
+	@HashPassword VARBINARY(MAX)
+AS
+BEGIN
+
+SELECT Id,[Login]
+FROM [User]
+WHERE  @Login = [Login] AND @Password = HashPassword
+END
+GO
+
 
 
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthDao.cs" />
     <Compile Include="HallDao.cs" />
     <Compile Include="LessonDao.cs" />
     <Compile Include="MyRoleProviderDao.cs" />

@@ -13,21 +13,27 @@ namespace WebPL.Modal
     {
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        IMyRoleProviderLogic myRole = DependenciesResolver.Kernel.Get<MyRoleProviderLogic>();
+        private IMyRoleProviderLogic _myRole = DependenciesResolver.Kernel.Get<MyRoleProviderLogic>();
+        private IUserLogic _userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
 
         public override string[] GetRolesForUser(string username)
         {
-            return myRole.GetRolesForUser(username);
+            var listRole = _myRole.GetRolesForUser(username);
+
+
+            return _myRole.GetRolesForUser(username);
         }
 
         public override string[] GetUsersInRole(string roleName)
         {
-            return myRole.GetUsersInRole(roleName);
+            throw new NotImplementedException();
+            //return myRole.GetUsersInRole(roleName);
         }
 
         public override bool IsUserInRole(string username, string roleName)
         {
-            return myRole.IsUserInRole(username, roleName);
+            throw new NotImplementedException();
+            //return myRole.IsUserInRole(username, roleName);
         }
 
 

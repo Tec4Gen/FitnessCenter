@@ -6,3 +6,4 @@ D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Logger\obj\Debug\Ep
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Logger\obj\Debug\Epam.FitnessCenter.Logger.csproj.CopyComplete
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Logger\obj\Debug\Epam.FitnessCenter.Logger.dll
 D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Logger\obj\Debug\Epam.FitnessCenter.Logger.pdb
+D:\MyGit\FitnessCenter\Epam.FitnessCenter\Epam.FitnessCenter.Logger\obj\Debug\Epam.FitnessCenter.Logger.csprojAssemblyReference.cache

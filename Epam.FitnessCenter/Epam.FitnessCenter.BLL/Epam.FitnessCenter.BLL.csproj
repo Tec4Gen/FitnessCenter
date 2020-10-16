@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthLogic.cs" />
     <Compile Include="HallLogic.cs" />
     <Compile Include="LessonLogic.cs" />
     <Compile Include="MyRoleProviderLogic.cs" />

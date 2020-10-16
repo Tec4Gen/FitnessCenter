@@ -130,6 +130,7 @@
     <Content Include="Pages\Redirect\DeleteUser.cshtml" />
     <Content Include="Pages\SingIn.cshtml" />
     <Content Include="Pages\UsersLessons.cshtml" />
+    <Content Include="Pages\SingUp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

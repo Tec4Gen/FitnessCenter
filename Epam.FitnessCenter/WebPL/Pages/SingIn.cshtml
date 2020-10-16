@@ -1,33 +1,46 @@
-﻿@{
-    Layout = null;
+﻿@using Epam.FitnessCenter.Entities;
+@using Epam.FitnessCenter.Ioc;
+@using Epam.FitnessCenter.BLL.Interface;
+@using Ninject; 
+@{
+    Layout = "~/Pages/BasePages/_main.cshtml";
+    Page.Section = "SingIn";
+
+    if (IsPost)
+    {
+        if (!Request["login"].IsEmpty() && !Request["password"].IsEmpty())
+        {
+            var login = Request["login"];
+            var password = Request["password"];
+
+            var authLogic = DependenciesResolver.Kernel.Get<IAuthLogic>();
+
+            System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+            byte[] bytePassword = encoding.GetBytes(password);
+
+            if (authLogic.CanLogin(login, bytePassword))
+            {
+                FormsAuthentication.SetAuthCookie(login, createPersistentCookie: true);
+                Response.Redirect("~/Pages/Index.cshtml");
+            }
+        }
+
+    }
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/Style/Style.css" rel="stylesheet" />
-    <title></title>
-</head>
-<body>
+@section SingIn{
     <div class="containerFormSingIn">
-
-        <form class="SingIn">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input name="Login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <form class="SingIn" action="~/Pages/SingIn.cshtml" method="post">
+            <div class="form-group col-md-3">
+                <label for="Login">Login</label>
+                <input name="login" class="form-control" type="text" value="">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input name="password" type="password" class="form-control" id="Password" placeholder="Password">
             </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-</body>
-</html>
+}

@@ -16,6 +16,7 @@ namespace Epam.FitnessCenter.Ioc
             Bind<IUsersLessonDao>().To<UsersLessonDao>();
             Bind<IRoleWebSiteDao>().To<RoleWebSiteDao>();
             Bind<IMyRoleProviderDao>().To<MyRoleProviderDao>();
+            Bind<IAuthDao>().To<AuthDao>();
 
             Bind<IUserLogic>().To<UserLogic>();
             Bind<IHallLogic>().To<HallLogic>();
@@ -23,6 +24,7 @@ namespace Epam.FitnessCenter.Ioc
             Bind<IUsersLessonLogic>().To<UsersLessonLogic>();
             Bind<IRoleWebSiteLogic>().To<RoleWebSiteLogic>();
             Bind<IMyRoleProviderLogic>().To<MyRoleProviderLogic>();
+            Bind<IAuthLogic>().To<AuthLogic>();
         }
     }
 }

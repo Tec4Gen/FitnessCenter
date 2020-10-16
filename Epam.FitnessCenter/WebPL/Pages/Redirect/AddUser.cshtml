@@ -19,11 +19,19 @@
             !Request["firstName"].IsEmpty() &&
             !Request["middleName"].IsEmpty() &&
             !Request["login"].IsEmpty() &&
-            !Request["password"].IsEmpty() &&
-            int.TryParse(Request["role"].Split(' ')[0], out int idRole))
+            !Request["password"].IsEmpty())
         {
             System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
             byte[] password = encoding.GetBytes(Request["password"]);
+            int idRole;
+            if (!Request["role"].IsEmpty())
+            {
+                int.TryParse(Request["role"].Split(' ')[0], out idRole);
+            }
+            else
+            {
+                idRole = 3;
+            }
 
             _userLogic.Add(new User
             {
@@ -39,7 +47,7 @@
             if (!listError.Any())
             {
                 <div class="alert alert-success" role="alert">
-                    User successfully added
+                    Successfully registered
                 </div>
             }
             else

@@ -720,3 +720,12 @@ The statement has been terminated.
 2020-10-08 23:12:16,503 [6] INFO  LOGGER All lesson received
 2020-10-08 23:12:17,092 [8] INFO  LOGGER All user received
 2020-10-08 23:12:17,616 [7] INFO  LOGGER All hall received
+2020-10-16 13:10:24,811 [6] ERROR LOGGER Violation of UNIQUE KEY constraint 'UQ__User__5E55825B4D74545C'. Cannot insert duplicate key in object 'dbo.User'. The duplicate key value is (Tec4Ge).
+The statement has been terminated.
+2020-10-16 13:10:34,469 [6] INFO  LOGGER User added
+2020-10-16 14:24:04,114 [6] INFO  LOGGER User added
+2020-10-16 14:26:31,829 [9] ERROR LOGGER Procedure or function 'CheckUser' expects parameter '@HashPassword', which was not supplied.
+2020-10-16 14:30:08,863 [6] ERROR LOGGER Procedure or function 'CheckUser' expects parameter '@Password', which was not supplied.
+2020-10-16 14:30:43,037 [6] INFO  LOGGER There is such a user
+2020-10-16 14:30:45,415 [6] INFO  LOGGER There is such a user
+2020-10-16 14:32:03,429 [6] INFO  LOGGER There is such a user
