@@ -17,19 +17,9 @@ namespace Epam.FitnessCenter.BLL
             _provDao = provDao;
         }
 
-        public string[] GetRolesForUser(string username)
+        public string GetRolesForUser(string username)
         {
             return _provDao.GetRolesForUser(username);
-        }
-
-        public string[] GetUsersInRole(string roleName)
-        {
-            return _provDao.GetUsersInRole(roleName);
-        }
-
-        public bool IsUserInRole(string username, string roleName)
-        {
-            return _provDao.IsUserInRole(username, roleName);
         }
     }
 }

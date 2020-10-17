@@ -12,5 +12,9 @@
 
 }
 @section startPage{
+    @if (!Request["SingIn"].IsEmpty())
+    {
+        <div class="alert alert-success">Welcome to the club buddy @Request["SingIn"]</div>
+    }
     <div>Welcome to the club buddy</div>
 }

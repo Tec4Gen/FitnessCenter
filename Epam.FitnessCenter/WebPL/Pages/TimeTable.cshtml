@@ -10,8 +10,11 @@
     var hallLogic = DependenciesResolver.Kernel.Get<IHallLogic>();
 }
 @section timeTable{
-    <a href="~/Pages/Add/AddLesson.cshtml" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add lesson</a>
-    <table class="table table-bordered"  id="table">
+    @if (User.IsInRole("Admin"))
+    {
+        <a href="~/Pages/Add/AddLesson.cshtml" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add lesson</a>
+    }
+    <table class="table table-bordered" id="table">
         <thead>
             <tr>
                 <th scope="col">Hall title</th>
@@ -35,8 +38,11 @@
                     <td>@item.Description</td>
 
                     @*<td><a class="Lesson-@item.Id btn btn-info container-fluid" href="#">Subscribe</a></td>*@
-                    <td><a class="Edit-@item.Id btn btn-primary container-fluid" href="~/Pages/Add/EditLesson.cshtml?IdLesson=@item.Id">Edit</a></td>
-                    <td><a  name="btnD" id="Delete-@item.Id" class="btn btn-danger container-fluid" href="#">Delete</a></td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <td><a class="Edit-@item.Id btn btn-primary container-fluid" href="~/Pages/Add/EditLesson.cshtml?IdLesson=@item.Id">Edit</a></td>
+                        <td><a name="btnD" id="Delete-@item.Id" class="btn btn-danger container-fluid" href="#">Delete</a></td>
+                    }
                 </tr>
             }
         </tbody>

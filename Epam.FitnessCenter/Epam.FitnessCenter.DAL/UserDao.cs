@@ -283,6 +283,50 @@ namespace Epam.FitnessCenter.DAL
             }
         }
 
+        public User GetByLogin(string login)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                var command = connection.CreateCommand();
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "dbo.GetUserByLogin";
+
+                SqlParameter parameterLogin = new SqlParameter
+                {
+                    DbType = DbType.String,
+                    ParameterName = "@Login",
+                    Value = login,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(parameterLogin);
+
+                try
+                {
+                    connection.Open();
+
+                    var reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        return new User
+                        {
+                            Id = (int)reader["Id"],                    
+                            RoleWebSite = (int)reader["RoleWebSite"]
+                        };
+                    }
+                    Logs.Log.Info("User received");
+
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    Logs.Log.Error(ex.Message);
+                    throw;
+                }
+            }
+        }
+
         public void Remove(int id)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))

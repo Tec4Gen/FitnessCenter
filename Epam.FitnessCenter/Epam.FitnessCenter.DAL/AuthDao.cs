@@ -45,7 +45,7 @@ namespace Epam.FitnessCenter.DAL
                 {
                     connection.Open();
 
-                    result = (Int32)command.ExecuteScalar();
+                    result = (int)command.ExecuteScalar();
 
                     Logs.Log.Info("There is such a user");
                 }

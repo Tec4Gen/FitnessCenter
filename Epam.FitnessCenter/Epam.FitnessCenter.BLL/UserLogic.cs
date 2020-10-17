@@ -74,6 +74,11 @@ namespace Epam.FitnessCenter.BLL
             return _userDao.GetById(id);
         }
 
+        public User GetByLogin(string login)
+        {
+            return _userDao.GetByLogin(login);
+        }
+
         public void Remove(int id, out ICollection<Error> listError)
         {
             listError = new List<Error>();

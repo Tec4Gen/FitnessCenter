@@ -99,7 +99,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modal\MyRoleProvider.cs" />
+    <Compile Include="Model\MyRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +131,7 @@
     <Content Include="Pages\SingIn.cshtml" />
     <Content Include="Pages\UsersLessons.cshtml" />
     <Content Include="Pages\SingUp.cshtml" />
+    <Content Include="Pages\SingOut.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,6 +147,10 @@
     <ProjectReference Include="..\Epam.FitnessCenter.BLL\Epam.FitnessCenter.BLL.csproj">
       <Project>{39099F3D-B2DD-4BF7-8121-CE1D9568E641}</Project>
       <Name>Epam.FitnessCenter.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.FitnessCenter.Entities\Epam.FitnessCenter.Entities.csproj">
+      <Project>{3a13798e-cf77-4327-9c6c-6f8f52087cf9}</Project>
+      <Name>Epam.FitnessCenter.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Epam.FitnessCenter.Ioc\Epam.FitnessCenter.Ioc.csproj">
       <Project>{4c66402e-6065-4b4d-9ffb-3493fffac6d9}</Project>

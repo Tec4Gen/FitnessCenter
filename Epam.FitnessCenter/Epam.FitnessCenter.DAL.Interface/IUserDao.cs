@@ -11,6 +11,8 @@ namespace Epam.FitnessCenter.DAL.Interface
     {
         User GetById(int id);
 
+        User GetByLogin(string login);
+
         void Add(User user);
 
         void Remove(int id);

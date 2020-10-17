@@ -43,16 +43,7 @@ ALTER TABLE [User]
 	ON DELETE SET NULL
 GO
 
-CREATE PROCEDURE [dbo].[CheckUser]
-	@Login NVARCHAR(50),
-	@HashPassword NVARCHAR(50)
-AS	
-BEGIN
-	SELECT [Login],HashPassword
-	FROM [User]
-	WHERE  @Login = [Login] AND @HashPassword = HashPassword;
-END
-GO
+
 --///////////////////////////////////////////////
 --                  Lesson Table
 --///////////////////////////////////////////////
@@ -111,6 +102,16 @@ GO
 --///////////////////////////////////////////////
 --          StorageProcedure User
 --///////////////////////////////////////////////
+CREATE PROCEDURE [dbo].[CheckUser]
+	@Login NVARCHAR(50),
+	@HashPassword NVARCHAR(50)
+AS	
+BEGIN
+	SELECT [Login],HashPassword
+	FROM [User]
+	WHERE  @Login = [Login] AND @HashPassword = HashPassword;
+END
+GO
 
 CREATE PROCEDURE [dbo].[GetUserById]
 	@Id INT
@@ -119,6 +120,16 @@ BEGIN
      SELECT	Id, FirstName, LastName, MiddleName, RoleWebSite, Avatar
 	 FROM [User]
      WHERE (@Id = Id )
+END
+GO
+
+CREATE PROCEDURE [dbo].[GetUserByIdLogin]
+	@Login NVARCHAR(50)
+AS
+BEGIN
+     SELECT	Id, RoleWebSite
+	 FROM [User]
+     WHERE [Login]  = @Login
 END
 GO
 
@@ -365,7 +376,8 @@ BEGIN
 SELECT rol.[Name]
 FROM [User]
  INNER JOIN RoleWebSite rol
- ON [User].RoleWebSite = rol.Id;
+ ON [User].RoleWebSite = rol.Id
+WHERE @UserName = [User].Login
      
 END
 GO
@@ -376,9 +388,9 @@ CREATE PROCEDURE [dbo].[CheckUser]
 AS
 BEGIN
 
-SELECT Id,[Login]
+SELECT COUNT(*)
 FROM [User]
-WHERE  @Login = [Login] AND @Password = HashPassword
+WHERE  [Login] = @Login AND HashPassword = @HashPassword
 END
 GO
 

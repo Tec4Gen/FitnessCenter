@@ -21,14 +21,23 @@
             if (authLogic.CanLogin(login, bytePassword))
             {
                 FormsAuthentication.SetAuthCookie(login, createPersistentCookie: true);
-                Response.Redirect("~/Pages/Index.cshtml");
+                Response.Redirect($"~/Pages/Index.cshtml?SingIn={login}");
             }
+            else
+            {
+                Page.SingIn = "There is no user with this username or password";
+            }
+
         }
 
     }
 }
 
 @section SingIn{
+    @if (IsPost) 
+    { 
+        <div class="alert alert-danger">@Page.SingIn</div>
+    }
     <div class="containerFormSingIn">
         <form class="SingIn" action="~/Pages/SingIn.cshtml" method="post">
             <div class="form-group col-md-3">

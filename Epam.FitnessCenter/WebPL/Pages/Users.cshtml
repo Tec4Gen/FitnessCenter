@@ -9,6 +9,11 @@
     var userLogic = DependenciesResolver.Kernel.Get<IUserLogic>();
 }
 @section userTable{
+    @if (User.IsInRole("Admin"))
+    {
+        <a href="~/Pages/Add/AddUser.cshtml" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add user</a>
+    }
+
     <table id="table" class="table table-bordered">
         <thead>
             <tr>
@@ -28,10 +33,15 @@
                     <td>@item.FirstName</td>
                     <td>@item.MiddleName</td>
                     <td>@role.Name</td>
-
-                    <td><a class="Edit btn btn-primary container-fluid" href="~/Pages/Add/EditUser.cshtml?IdUser=@item.Id">Edit</a></td>
-                    <td><a class="Show-@item.Id btn btn-info container-fluid centered " href="~/Pages/UsersLessons.cshtml?IdUser=@item.Id">View all lessons</a></td>
-                    <td><a name="btnDU" id="Delete-@item.Id" class="btn btn-danger container-fluid" href="#">Delete</a></td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <td><a class="Edit btn btn-primary container-fluid" href="~/Pages/Add/EditUser.cshtml?IdUser=@item.Id">Edit</a></td>
+                        <td><a name="btnDU" id="Delete-@item.Id" class="btn btn-danger container-fluid" href="#">Delete</a></td>
+                    }
+                    @if (User.IsInRole("Admin") || User.IsInRole("Trainer"))
+                    {
+                        <td><a class="Show-@item.Id btn btn-info container-fluid centered " href="~/Pages/UsersLessons.cshtml?IdUser=@item.Id">View all lessons</a></td>
+                    }
                 </tr>
             }
         </tbody>
